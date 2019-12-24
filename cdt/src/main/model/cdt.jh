@@ -1,0 +1,109 @@
+#font: Times
+#fontSize: 10
+#spacing: 12
+#padding: 3 
+NAME_MAX_LENGTH = 1000
+TEXT_MAX_LENGTH = 4000
+CODE_MAX_LENGTH = 50
+NOTE_MAX_LENGTH = 4000
+EMAIL_MAX_LENGTH = 500
+entity OrgOfficer {
+	officerType Long
+    officerCode String maxlength(CODE_MAX_LENGTH) 
+    officerName String maxlength(NAME_MAX_LENGTH)
+    email String maxlength(EMAIL_MAX_LENGTH)
+    note String maxlength(NOTE_MAX_LENGTH)
+    trinhDo String
+    chucDanh String
+    maBacSi String
+    hocHam String
+    hocVi String
+    phone String
+    opt String
+    diaChi String
+    ngaySinh Instant
+    gioiTinh String
+}
+
+entity CdtNhanVien {
+	csytid Long
+}
+
+entity CdtChiDaoTuyen(CDT) {
+	soQuyetDinh String
+    ngayQuyetDinh Instant
+    soHopDong String
+    ngayHopDong Instant
+    ghiChu String maxlength(NOTE_MAX_LENGTH)
+    noiDung String maxlength(NOTE_MAX_LENGTH)
+    ngayBD Instant
+    ngayKT Instant
+    ngayTao Instant
+    soBenhNhanKham Long
+    soBenhNhanKyThuat Long
+    soCanBoChuyenGiao Long
+}
+
+entity CdtNoiDen {
+	csytid Long
+}
+
+entity CdtNoiDenCongTac(NDCT) {
+	maNoiDen String maxlength(CODE_MAX_LENGTH)
+    tenNoiDen String maxlength(NAME_MAX_LENGTH)
+    thuTuSapXep Long
+    csytid Long
+}
+entity CdtLyDoCongTac(LDCT) {
+	maLyDo String maxlength(CODE_MAX_LENGTH)
+    tenLyDo String maxlength(NAME_MAX_LENGTH)
+    thuTuSapXep Long
+    csytid Long
+}
+entity CdtTaiChinh {
+	loai String
+    soTien Long
+    csytid Long
+}
+entity CdtKyThuat {
+	csytid Long
+}
+entity CdtKyThuatHoTro(KTHTRO) {
+	maNoiDen String maxlength(CODE_MAX_LENGTH)
+    tenNoiDen String maxlength(NAME_MAX_LENGTH)
+    thuTuSapXep Long
+    csytid Long
+}
+entity CdtVatTu {
+	csytid Long
+}
+entity CdtVatTuHoTro(VTHT) {
+	maVatTu String maxlength(CODE_MAX_LENGTH)
+    tenVatTu String maxlength(NAME_MAX_LENGTH)
+    thuTuSapXep Long
+    csytid Long
+}
+entity CdtKetQuaCongTac(KQCT) {
+	maKetQua String maxlength(CODE_MAX_LENGTH)
+    tenKetQua String maxlength(NAME_MAX_LENGTH)
+    thuTuSapXep Long
+    csytid Long
+}
+
+relationship OneToMany {
+	OrgOfficer{nhanvien} to CdtNhanVien
+    CdtChiDaoTuyen{nhanvien} to CdtNhanVien
+    CdtNoiDenCongTac{noiden} to CdtNoiDen
+    CdtChiDaoTuyen{noiden} to CdtNoiDen
+    CdtKyThuatHoTro{kythuat} to CdtKyThuat
+    CdtChiDaoTuyen{kythuat} to CdtKyThuat
+    CdtVatTuHoTro{vattu} to CdtVatTu
+    CdtChiDaoTuyen{vattu} to CdtVatTu
+    CdtChiDaoTuyen{lydocongtac} to CdtLyDoCongTac
+    CdtChiDaoTuyen{ketquacongtac} to CdtKetQuaCongTac
+    CdtChiDaoTuyen{taichinh} to CdtTaiChinh
+}
+
+paginate * with pagination
+service * with serviceClass
+filter *

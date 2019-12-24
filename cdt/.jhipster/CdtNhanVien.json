@@ -1,0 +1,35 @@
+{
+    "name": "CdtNhanVien",
+    "fields": [
+        {
+            "fieldName": "csytid",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "orgOfficer",
+            "otherEntityRelationshipName": "nhanvien",
+            "relationshipName": "orgOfficer",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cdtChiDaoTuyen",
+            "otherEntityRelationshipName": "nhanvien",
+            "relationshipName": "cdtChiDaoTuyen",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191223010929",
+    "entityTableName": "cdt_nhan_vien",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

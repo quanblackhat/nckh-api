@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql, mariadb"/>
+    <property name="clobType" value="clob" dbms="h2"/>
+    <property name="clobType" value="clob" dbms="mysql, oracle, mssql, mariadb, postgresql"/>
+    <property name="uuidType" value="uuid" dbms="h2, oracle"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010928_added_entity_OrgOfficer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010929_added_entity_CdtNhanVien.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010930_added_entity_CdtChiDaoTuyen.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010931_added_entity_CdtNoiDen.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010932_added_entity_CdtNoiDenCongTac.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010933_added_entity_CdtLyDoCongTac.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010934_added_entity_CdtTaiChinh.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010935_added_entity_CdtKyThuat.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010936_added_entity_CdtKyThuatHoTro.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010937_added_entity_CdtVatTu.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010938_added_entity_CdtVatTuHoTro.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010939_added_entity_CdtKetQuaCongTac.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20191223010929_added_entity_constraints_CdtNhanVien.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010931_added_entity_constraints_CdtNoiDen.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010933_added_entity_constraints_CdtLyDoCongTac.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010934_added_entity_constraints_CdtTaiChinh.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010935_added_entity_constraints_CdtKyThuat.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010937_added_entity_constraints_CdtVatTu.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191223010939_added_entity_constraints_CdtKetQuaCongTac.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

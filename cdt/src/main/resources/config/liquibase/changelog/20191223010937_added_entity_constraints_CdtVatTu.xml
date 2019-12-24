@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity CdtVatTu.
+    -->
+    <changeSet id="20191223010937-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="cdt_vat_tu_ho_tro_id"
+                                 baseTableName="cdt_vat_tu"
+                                 constraintName="cdt_vat_tu_cdt_vat_tu_ho_tr_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vtht"/>
+
+        <addForeignKeyConstraint baseColumnNames="cdt_chi_dao_tuyen_id"
+                                 baseTableName="cdt_vat_tu"
+                                 constraintName="cdt_vat_tu_cdt_chi_dao_tuye_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cdt"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,48 @@
+{
+    "name": "CdtKetQuaCongTac",
+    "fields": [
+        {
+            "fieldName": "maKetQua",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "tenKetQua",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 1000
+        },
+        {
+            "fieldName": "thuTuSapXep",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "csytid",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cdtChiDaoTuyen",
+            "otherEntityRelationshipName": "ketquacongtac",
+            "relationshipName": "cdtChiDaoTuyen",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191223010939",
+    "entityTableName": "kqct",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity NckhDetai.
+    -->
+    <changeSet id="20191223072043-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="nckh_danhmuc_id"
+                                 baseTableName="nckh_detai"
+                                 constraintName="fk_nckh_detai_nckh_danhmuc_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="nckh_danhmuc"/>
+
+    </changeSet>
+</databaseChangeLog>

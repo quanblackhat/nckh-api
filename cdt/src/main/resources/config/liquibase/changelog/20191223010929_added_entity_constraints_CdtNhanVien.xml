@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity CdtNhanVien.
+    -->
+    <changeSet id="20191223010929-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="org_officer_id"
+                                 baseTableName="cdt_nhan_vien"
+                                 constraintName="cdt_nhan_vien_org_officer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="org_officer"/>
+
+        <addForeignKeyConstraint baseColumnNames="cdt_chi_dao_tuyen_id"
+                                 baseTableName="cdt_nhan_vien"
+                                 constraintName="cdt_nhan_vien_cdt_chi_dao_t_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cdt"/>
+
+    </changeSet>
+</databaseChangeLog>

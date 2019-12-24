@@ -1,0 +1,115 @@
+{
+    "name": "CdtChiDaoTuyen",
+    "fields": [
+        {
+            "fieldName": "soQuyetDinh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ngayQuyetDinh",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "soHopDong",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ngayHopDong",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "ghiChu",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 4000
+        },
+        {
+            "fieldName": "noiDung",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 4000
+        },
+        {
+            "fieldName": "ngayBD",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "ngayKT",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "ngayTao",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "soBenhNhanKham",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "soBenhNhanKyThuat",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "soCanBoChuyenGiao",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cdtNhanVien",
+            "otherEntityRelationshipName": "cdtChiDaoTuyen",
+            "relationshipName": "nhanvien"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cdtNoiDen",
+            "otherEntityRelationshipName": "cdtChiDaoTuyen",
+            "relationshipName": "noiden"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cdtKyThuat",
+            "otherEntityRelationshipName": "cdtChiDaoTuyen",
+            "relationshipName": "kythuat"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cdtVatTu",
+            "otherEntityRelationshipName": "cdtChiDaoTuyen",
+            "relationshipName": "vattu"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cdtLyDoCongTac",
+            "otherEntityRelationshipName": "cdtChiDaoTuyen",
+            "relationshipName": "lydocongtac"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cdtKetQuaCongTac",
+            "otherEntityRelationshipName": "cdtChiDaoTuyen",
+            "relationshipName": "ketquacongtac"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cdtTaiChinh",
+            "otherEntityRelationshipName": "cdtChiDaoTuyen",
+            "relationshipName": "taichinh"
+        }
+    ],
+    "changelogDate": "20191223010930",
+    "entityTableName": "cdt",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

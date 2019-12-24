@@ -1,0 +1,115 @@
+{
+    "name": "OrgOfficer",
+    "fields": [
+        {
+            "fieldName": "officerType",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "officerCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "officerName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 255
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 500
+        },
+        {
+            "fieldName": "note",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 4000
+        },
+        {
+            "fieldName": "trinhDo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "chucDanh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "maBacSi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hocHam",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hocVi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "opt",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "diaChi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ngaySinh",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "gioiTinh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "deptId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "subDeptId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "nckhNhanSu",
+            "otherEntityRelationshipName": "orgOfficer",
+            "relationshipName": "nckhNhanSu"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "orgOrganization",
+            "otherEntityRelationshipName": "orgOfficer",
+            "relationshipName": "orgOrganization",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191223072047",
+    "javadoc": "OrgOfficer entity.\\n@author VINHHC.",
+    "entityTableName": "org_officer",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,48 @@
+{
+    "name": "CdtLyDoCongTac",
+    "fields": [
+        {
+            "fieldName": "maLyDo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "tenLyDo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 1000
+        },
+        {
+            "fieldName": "thuTuSapXep",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "csytid",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "cdtChiDaoTuyen",
+            "otherEntityRelationshipName": "lydocongtac",
+            "relationshipName": "cdtChiDaoTuyen",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191223010933",
+    "entityTableName": "ldct",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

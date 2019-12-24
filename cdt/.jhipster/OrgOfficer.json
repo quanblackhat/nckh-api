@@ -1,0 +1,99 @@
+{
+    "name": "OrgOfficer",
+    "fields": [
+        {
+            "fieldName": "officerType",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "officerCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "officerName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 1000
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 500
+        },
+        {
+            "fieldName": "note",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 4000
+        },
+        {
+            "fieldName": "trinhDo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "chucDanh",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "maBacSi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hocHam",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hocVi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "opt",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "diaChi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ngaySinh",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "gioiTinh",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cdtNhanVien",
+            "otherEntityRelationshipName": "orgOfficer",
+            "relationshipName": "nhanvien"
+        }
+    ],
+    "changelogDate": "20191223010928",
+    "entityTableName": "org_officer",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

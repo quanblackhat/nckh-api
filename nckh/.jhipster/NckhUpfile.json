@@ -1,0 +1,46 @@
+{
+    "name": "NckhUpfile",
+    "fields": [
+        {
+            "fieldName": "moTa",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 4000
+        },
+        {
+            "fieldName": "noiDung",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "nguoiCN",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "ngayCN",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "nckhDetai",
+            "otherEntityRelationshipName": "nckhUpfile",
+            "relationshipName": "nckhDetai",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191223072045",
+    "javadoc": "NckhUpfile entity.\\n@author VINHHC.",
+    "entityTableName": "nckh_upfile",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
