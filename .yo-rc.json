@@ -1,0 +1,37 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.vnptit.vnpthis"
+    },
+    "jhipsterVersion": "6.6.0",
+    "applicationType": "monolith",
+    "baseName": "VnptHisBackend",
+    "packageName": "com.vnptit.vnpthis",
+    "packageFolder": "com/vnptit/vnpthis",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "oracle",
+    "prodDatabaseType": "oracle",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YTg4NzZmNWMxODRlZmVkNjJlZDYwZTczZDZkODRmNGI5NWJkNmQ3NThjM2NlYjhjMDBlMWMwMTk5YmYxZDMyMDZkMmM0MTVlZTVhY2U3Yjk4YzJiYmZiZGQzN2U5NDYzNDYyYWMwNzBhODFlZDIyMmVhYjgzYjYyOGJhYWRmN2E=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1578556904914,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "blueprints": [],
+    "skipClient": true
+  }
+}
