@@ -22,7 +22,7 @@ public class LyDoCongTacResource {
     @Autowired
     private LyDoCongTacService lyDoCongTacService;
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<LyDoCongTacDTO> getAll() {
         return lyDoCongTacService.getAll()
             .stream()
@@ -37,12 +37,12 @@ public class LyDoCongTacResource {
             .orElseThrow(() -> new LyDoCongTacResourceException("Khong tim thay ly do cong tac"));
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     public int add(@RequestBody CdtLydocongtac lydocongtac) {
         return lyDoCongTacService.add(lydocongtac);
     }
 
-    @PutMapping("/")
+    @PutMapping("")
     public void update(@RequestBody CdtLydocongtac lydocongtac) {
         lyDoCongTacService.update(lydocongtac);
     }

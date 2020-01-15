@@ -21,7 +21,7 @@ public class ChiDaoTuyenResource {
 
     @Autowired private ChiDaoTuyenService chiDaoTuyenService;
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<ChiDaoTuyenDTO> getAll() {
         return chiDaoTuyenService.getAll()
             .stream()
@@ -36,12 +36,12 @@ public class ChiDaoTuyenResource {
             .orElseThrow(() -> new ChiDaoTuyenResourceException("Khong tim thay ky thuat ho tro"));
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     public int add(@RequestBody CdtChidaotuyen chidaotuyen) {
         return chiDaoTuyenService.add(chidaotuyen);
     }
 
-    @PutMapping("/")
+    @PutMapping("")
     public void update(@RequestBody CdtChidaotuyen chidaotuyen) {
         chiDaoTuyenService.update(chidaotuyen);
     }

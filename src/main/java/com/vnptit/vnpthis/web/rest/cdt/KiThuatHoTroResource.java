@@ -22,7 +22,7 @@ public class KiThuatHoTroResource {
     @Autowired
     private KiThuatHoTroService kiThuatHoTroService;
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<KiThuatHoTroDTO> getAll() {
         return kiThuatHoTroService.getAll()
             .stream()
@@ -37,12 +37,12 @@ public class KiThuatHoTroResource {
             .orElseThrow(() -> new KiThuatHoTroResourceException("Khong tim thay ky thuat ho tro"));
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     public int add(@RequestBody CdtKythuathotro kythuathotro) {
         return kiThuatHoTroService.add(kythuathotro);
     }
 
-    @PutMapping("/")
+    @PutMapping("")
     public void update(@RequestBody CdtKythuathotro kythuathotro) {
         kiThuatHoTroService.update(kythuathotro);
     }

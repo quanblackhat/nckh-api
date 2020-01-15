@@ -22,7 +22,7 @@ public class VatTuHoTroResource {
     @Autowired
     private VatTuHoTroService vatTuHoTroService;
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<VatTuHoTroDTO> getAll() {
         return vatTuHoTroService.getAll()
             .stream()
@@ -37,12 +37,12 @@ public class VatTuHoTroResource {
             .orElseThrow(() -> new VatTuHoTroResourceException("Khong tim thay vat tu ho tro"));
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     public int add(@RequestBody CdtVattuhotro vattuhotro) {
         return vatTuHoTroService.add(vattuhotro);
     }
 
-    @PutMapping("/")
+    @PutMapping("")
     public void update(@RequestBody CdtVattuhotro vattuhotro) {
         vatTuHoTroService.update(vattuhotro);
     }

@@ -23,7 +23,7 @@ public class NoiDenCongTacResource {
     @Autowired
     private NoiDenCongTacService noiDenCongTacService;
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<NoiDenCongTacDTO> getAll() {
         return noiDenCongTacService.getAll()
             .stream()
@@ -38,12 +38,12 @@ public class NoiDenCongTacResource {
             .orElseThrow(() -> new NoiDenCongTacResourceException("Khong tim thay noi den cong tac"));
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     public int add(@RequestBody CdtNoidencongtac noidencongtac) {
         return noiDenCongTacService.add(noidencongtac);
     }
 
-    @PutMapping("/")
+    @PutMapping("")
     public void update(@RequestBody CdtNoidencongtac noidencongtac) {
         noiDenCongTacService.update(noidencongtac);
     }
