@@ -49,6 +49,13 @@ public class CdtChidaotuyen {
     )
     Set<CdtNoidencongtac> danhSachNoiDen = new HashSet<>();
 
+    @ManyToOne
+    @JoinColumn(name = "lydocongtacid", insertable = false, updatable = false)
+    private CdtLydocongtac lydocongtac;
+
+    @ManyToOne
+    @JoinColumn(name = "ketquacongtacid", insertable = false, updatable = false)
+    private CdtKetquacongtac ketquacongtac;
 
 
     public Set<CdtKythuathotro> getDanhSachKyThuatHoTro() {
@@ -203,6 +210,42 @@ public class CdtChidaotuyen {
 
     public void setKetquacongtacid(int ketquacongtacid) {
         this.ketquacongtacid = ketquacongtacid;
+    }
+
+    public void setDanhSachKyThuatHoTro(Set<CdtKythuathotro> danhSachKyThuatHoTro) {
+        this.danhSachKyThuatHoTro = danhSachKyThuatHoTro;
+    }
+
+    public Set<CdtVattuhotro> getDanhSachVatTuHoTro() {
+        return danhSachVatTuHoTro;
+    }
+
+    public void setDanhSachVatTuHoTro(Set<CdtVattuhotro> danhSachVatTuHoTro) {
+        this.danhSachVatTuHoTro = danhSachVatTuHoTro;
+    }
+
+    public Set<CdtNoidencongtac> getDanhSachNoiDen() {
+        return danhSachNoiDen;
+    }
+
+    public void setDanhSachNoiDen(Set<CdtNoidencongtac> danhSachNoiDen) {
+        this.danhSachNoiDen = danhSachNoiDen;
+    }
+
+    public CdtLydocongtac getLydocongtac() {
+        return lydocongtac;
+    }
+
+    public void setLydocongtac(CdtLydocongtac lydocongtac) {
+        this.lydocongtac = lydocongtac;
+    }
+
+    public CdtKetquacongtac getKetquacongtac() {
+        return ketquacongtac;
+    }
+
+    public void setKetquacongtac(CdtKetquacongtac ketquacongtac) {
+        this.ketquacongtac = ketquacongtac;
     }
 
     @Override

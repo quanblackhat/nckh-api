@@ -1,6 +1,8 @@
 package com.vnptit.vnpthis.domain;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "CDT_LYDOCONGTAC", schema = "PM2_FRESHER", catalog = "")
@@ -11,6 +13,17 @@ public class CdtLydocongtac {
     private String tenlydo;
     private Byte thutusapxep;
     private int csytid;
+
+    @OneToMany(mappedBy = "lydocongtac")
+    private Set<CdtChidaotuyen> chidaotuyen = new HashSet<>();
+
+    public Set<CdtChidaotuyen> getChidaotuyen() {
+        return chidaotuyen;
+    }
+
+    public void setChidaotuyen(Set<CdtChidaotuyen> chidaotuyen) {
+        this.chidaotuyen = chidaotuyen;
+    }
 
     @Basic
     @Column(name = "LYDOCONGTACID", nullable = false, precision = 0)

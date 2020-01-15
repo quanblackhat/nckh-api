@@ -1,4 +1,4 @@
-package com.vnptit.vnpthis.repository;
+package com.vnptit.vnpthis.repository.cdt;
 
 import com.vnptit.vnpthis.domain.CdtChidaotuyen;
 import org.springframework.data.jpa.repository.JpaRepository;
