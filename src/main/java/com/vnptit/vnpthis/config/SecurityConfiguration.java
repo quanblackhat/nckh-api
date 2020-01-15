@@ -1,10 +1,8 @@
 package com.vnptit.vnpthis.config;
 
-import com.vnptit.vnpthis.security.*;
-import com.vnptit.vnpthis.security.jwt.*;
-
-import org.springframework.beans.factory.BeanInitializationException;
-import org.springframework.beans.factory.InitializingBean;
+import com.vnptit.vnpthis.security.AuthoritiesConstants;
+import com.vnptit.vnpthis.security.jwt.JWTConfigurer;
+import com.vnptit.vnpthis.security.jwt.TokenProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.HttpMethod;
@@ -14,12 +12,15 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.header.writers.ReferrerPolicyHeaderWriter;
 import org.springframework.web.filter.CorsFilter;
 import org.zalando.problem.spring.web.advice.security.SecurityProblemSupport;
+
+import javax.xml.bind.DatatypeConverter;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
@@ -37,9 +38,39 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         this.problemSupport = problemSupport;
     }
 
+//    @Bean
+//    public PasswordEncoder passwordEncoder() {
+//        return new BCryptPasswordEncoder();
+//    }
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+        return new PasswordEncoder() {
+            @Override
+            public String encode(CharSequence charSequence) {
+                return getMd5(charSequence.toString());
+            }
+
+            @Override
+            public boolean matches(CharSequence charSequence, String s) {
+                return getMd5(charSequence.toString()).equals(s);
+            }
+        };
+    }
+
+    private String getMd5(String str) {
+        try{
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            md.update(str.getBytes());
+            byte[] digest = md.digest();
+            String myHash = DatatypeConverter
+                .printHexBinary(digest).toUpperCase();
+            return myHash;
+        }
+        catch (NoSuchAlgorithmException e){
+            System.out.println("Exception thrown"
+                + " for incorrect algorithm: " + e);
+            return null;
+        }
     }
 
     @Override
