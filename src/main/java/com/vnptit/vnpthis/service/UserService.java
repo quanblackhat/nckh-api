@@ -1,8 +1,10 @@
 package com.vnptit.vnpthis.service;
 
 import com.vnptit.vnpthis.config.Constants;
+import com.vnptit.vnpthis.domain.AdmUser;
 import com.vnptit.vnpthis.domain.Authority;
 import com.vnptit.vnpthis.domain.User;
+import com.vnptit.vnpthis.repository.AdmUserRepository;
 import com.vnptit.vnpthis.repository.AuthorityRepository;
 import com.vnptit.vnpthis.repository.UserRepository;
 import com.vnptit.vnpthis.security.AuthoritiesConstants;
@@ -13,6 +15,7 @@ import io.github.jhipster.security.RandomUtil;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -42,6 +45,10 @@ public class UserService {
     private final AuthorityRepository authorityRepository;
 
     private final CacheManager cacheManager;
+
+    @Autowired
+    private AdmUserRepository admUserRepository;
+
 
     public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder, AuthorityRepository authorityRepository, CacheManager cacheManager) {
         this.userRepository = userRepository;
@@ -272,6 +279,11 @@ public class UserService {
         return SecurityUtils.getCurrentUserLogin().flatMap(userRepository::findOneWithAuthoritiesByLogin);
     }
 
+
+    @Transactional(readOnly = true)
+    public Optional<AdmUser> getAdmUserWithAuthorities() {
+        return SecurityUtils.getCurrentUserLogin().flatMap(admUserRepository::getByUserName);
+    }
     /**
      * Not activated users should be automatically deleted after 3 days.
      * <p>

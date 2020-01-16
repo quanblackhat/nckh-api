@@ -2,10 +2,12 @@ package com.vnptit.vnpthis.web.rest;
 
 
 import com.vnptit.vnpthis.domain.User;
+import com.vnptit.vnpthis.repository.AdmUserRepository;
 import com.vnptit.vnpthis.repository.UserRepository;
 import com.vnptit.vnpthis.security.SecurityUtils;
 import com.vnptit.vnpthis.service.MailService;
 import com.vnptit.vnpthis.service.UserService;
+import com.vnptit.vnpthis.service.dto.AdmUserDTO;
 import com.vnptit.vnpthis.service.dto.PasswordChangeDTO;
 import com.vnptit.vnpthis.service.dto.UserDTO;
 import com.vnptit.vnpthis.web.rest.errors.*;
@@ -15,6 +17,7 @@ import com.vnptit.vnpthis.web.rest.vm.ManagedUserVM;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +37,7 @@ public class AccountResource {
             super(message);
         }
     }
+
 
     private final Logger log = LoggerFactory.getLogger(AccountResource.class);
 
@@ -100,13 +104,19 @@ public class AccountResource {
      * @return the current user.
      * @throws RuntimeException {@code 500 (Internal Server Error)} if the user couldn't be returned.
      */
+//    @GetMapping("/account")
+//    public UserDTO getAccount() {
+//        return userService.getUserWithAuthorities()
+//            .map(UserDTO::new)
+//            .orElseThrow(() -> new AccountResourceException("User could not be found"));
+//    }
+
     @GetMapping("/account")
-    public UserDTO getAccount() {
-        return userService.getUserWithAuthorities()
-            .map(UserDTO::new)
+    public AdmUserDTO getAccount() {
+        return userService.getAdmUserWithAuthorities()
+            .map(AdmUserDTO::new)
             .orElseThrow(() -> new AccountResourceException("User could not be found"));
     }
-
     /**
      * {@code POST  /account} : update the current user information.
      *
