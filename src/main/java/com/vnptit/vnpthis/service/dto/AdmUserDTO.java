@@ -3,6 +3,10 @@ package com.vnptit.vnpthis.service.dto;
 import com.vnptit.vnpthis.domain.AdmUser;
 import com.vnptit.vnpthis.security.AuthoritiesConstants;
 
+import java.util.List;
+
+import static java.util.Arrays.asList;
+
 public class AdmUserDTO {
     private String userName;
     private String fullName;
@@ -13,6 +17,51 @@ public class AdmUserDTO {
     private Long companyId;
     private String email;
     private String role;
+    private String login = AuthoritiesConstants.ADMIN;
+    private boolean activated = true;
+    private String langKey = "en";
+    private String createdBy = "system";
+    private List<String> authorities = asList(AuthoritiesConstants.USER, AuthoritiesConstants.ADMIN);
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public List<String> getAuthorities() {
+        return authorities;
+    }
+
+    public void setAuthorities(List<String> authorities) {
+        this.authorities = authorities;
+    }
+
+    public boolean isActivated() {
+        return activated;
+    }
+
+    public void setActivated(boolean activated) {
+        this.activated = activated;
+    }
+
+    public String getLangKey() {
+        return langKey;
+    }
+
+    public void setLangKey(String langKey) {
+        this.langKey = langKey;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
 
     public AdmUserDTO(AdmUser admUser) {
         userName = admUser.getUserName();
