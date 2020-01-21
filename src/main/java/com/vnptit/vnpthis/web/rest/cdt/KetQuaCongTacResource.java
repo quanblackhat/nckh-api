@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/cdt/api/v1.0/ketquacongtac")
+@RequestMapping("/api/ketquacongtac")
 public class KetQuaCongTacResource {
 
     private static class KetQuaCongTacResourceException extends RuntimeException {

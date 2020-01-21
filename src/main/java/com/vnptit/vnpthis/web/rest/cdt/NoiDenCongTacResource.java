@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/cdt/api/v1.0/noidencongtac")
+@RequestMapping("/api/noidencongtac")
 public class NoiDenCongTacResource {
 
     private static class NoiDenCongTacResourceException extends RuntimeException {

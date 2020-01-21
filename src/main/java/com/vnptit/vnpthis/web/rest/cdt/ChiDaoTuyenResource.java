@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/cdt/api/v1.0/chidaotuyen")
+@RequestMapping("/api/chidaotuyen")
 public class ChiDaoTuyenResource {
     @Autowired private ChiDaoTuyenMapper chiDaoTuyenMapper;
 

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/cdt/api/v1.0/lydocongtac")
+@RequestMapping("/api/lydocongtac")
 public class LyDoCongTacResource {
 
     private static class LyDoCongTacResourceException extends RuntimeException {

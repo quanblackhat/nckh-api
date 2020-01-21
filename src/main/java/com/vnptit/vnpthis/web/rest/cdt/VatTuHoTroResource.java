@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/cdt/api/v1.0/vattuhotro")
+@RequestMapping("/api/vattuhotro")
 public class VatTuHoTroResource {
 
     private static class VatTuHoTroResourceException extends RuntimeException {
