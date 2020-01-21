@@ -1,8 +1,10 @@
 package com.vnptit.vnpthis.web.rest.cdt;
 
 import com.vnptit.vnpthis.domain.CdtChidaotuyen;
+import com.vnptit.vnpthis.domain.ChiDaoTuyenRequestEntity;
 import com.vnptit.vnpthis.service.cdt.ChiDaoTuyenService;
 import com.vnptit.vnpthis.service.dto.ChiDaoTuyenDTO;
+import com.vnptit.vnpthis.service.mapper.ChiDaoTuyenMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +14,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/cdt/api/v1.0/chidaotuyen")
 public class ChiDaoTuyenResource {
+    @Autowired private ChiDaoTuyenMapper chiDaoTuyenMapper;
 
     private static class ChiDaoTuyenResourceException extends RuntimeException {
         private ChiDaoTuyenResourceException(String message) {
@@ -37,8 +40,9 @@ public class ChiDaoTuyenResource {
     }
 
     @PostMapping("")
-    public int add(@RequestBody CdtChidaotuyen chidaotuyen) {
-        return chiDaoTuyenService.add(chidaotuyen);
+    public int add(@RequestBody ChiDaoTuyenRequestEntity request) {
+        CdtChidaotuyen cdt = chiDaoTuyenMapper.toCdtChiDaoTuyen(request);
+        return chiDaoTuyenService.add(cdt);
     }
 
     @PutMapping("")

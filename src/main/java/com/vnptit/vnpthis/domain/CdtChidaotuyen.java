@@ -1,5 +1,7 @@
 package com.vnptit.vnpthis.domain;
 
+import com.vnptit.vnpthis.service.dto.ChiDaoTuyenDTO;
+
 import javax.persistence.*;
 import java.sql.Time;
 import java.util.HashSet;
@@ -9,6 +11,8 @@ import java.util.Set;
 @Table(name = "CDT_CHIDAOTUYEN", schema = "PM2_FRESHER", catalog = "")
 public class CdtChidaotuyen {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
+    @SequenceGenerator(name = "sequenceGenerator")
     private int chidaotuyenid;
     private String soquyetdinh;
     private Time ngayquyetdinh;
@@ -24,6 +28,11 @@ public class CdtChidaotuyen {
     private Integer sobenhnhankythuat;
     private Integer socanbochuyengiao;
     private int ketquacongtacid;
+
+    public CdtChidaotuyen() {
+
+    }
+
 
     @ManyToMany
     @JoinTable(
@@ -56,6 +65,8 @@ public class CdtChidaotuyen {
     @ManyToOne
     @JoinColumn(name = "ketquacongtacid", insertable = false, updatable = false)
     private CdtKetquacongtac ketquacongtac;
+
+
 
 
     public Set<CdtKythuathotro> getDanhSachKyThuatHoTro() {

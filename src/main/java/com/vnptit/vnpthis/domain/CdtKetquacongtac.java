@@ -8,6 +8,8 @@ import java.util.Set;
 @Table(name = "CDT_KETQUACONGTAC", schema = "PM2_FRESHER", catalog = "")
 public class CdtKetquacongtac {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
+    @SequenceGenerator(name = "sequenceGenerator")
     private int ketquacongtacid;
     private String maketqua;
     private String tenketqua;
