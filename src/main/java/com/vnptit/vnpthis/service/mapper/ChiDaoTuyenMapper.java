@@ -33,10 +33,18 @@ public class ChiDaoTuyenMapper {
         cdt.setSocanbochuyengiao(requestEntity.getSocanbochuyengiao());
 
         cdt.setLydocongtac(lyDoCongTacRepository.findById(requestEntity.getLydocongtacId()).get());
+        cdt.setLydocongtacid(requestEntity.getLydocongtacId());
         cdt.setKetquacongtac(ketQuaCongTacRepository.findById(requestEntity.getKetquacongtacId()).get());
-        cdt.setDanhSachVatTuHoTro(new HashSet<>(vatTuHoTroRepository.findAllById(requestEntity.getDanhsachVatTuHoTroID())));
-        cdt.setDanhSachKyThuatHoTro(new HashSet<>(kiThuatHoTroRepository.findAllById(requestEntity.getDanhsachKiThuatHoTroID())));
-        cdt.setDanhSachNoiDen(new HashSet<>(noiDenCongTacRepository.findAllById(requestEntity.getDanhsachNoiDenCongTacID())));
+        cdt.setKetquacongtacid(requestEntity.getKetquacongtacId());
+        if(requestEntity.getDanhsachVatTuHoTroID() != null) {
+            cdt.setDanhSachVatTuHoTro(new HashSet<>(vatTuHoTroRepository.findAllById(requestEntity.getDanhsachVatTuHoTroID())));
+        }
+        if(requestEntity.getDanhsachKiThuatHoTroID() != null) {
+            cdt.setDanhSachKyThuatHoTro(new HashSet<>(kiThuatHoTroRepository.findAllById(requestEntity.getDanhsachKiThuatHoTroID())));
+        }
+        if(requestEntity.getDanhsachKiThuatHoTroID() != null) {
+            cdt.setDanhSachNoiDen(new HashSet<>(noiDenCongTacRepository.findAllById(requestEntity.getDanhsachNoiDenCongTacID())));
+        }
         return cdt;
     }
 

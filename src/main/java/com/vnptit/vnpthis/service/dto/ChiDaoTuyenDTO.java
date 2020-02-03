@@ -1,24 +1,21 @@
 package com.vnptit.vnpthis.service.dto;
 
 import com.vnptit.vnpthis.domain.cdt.CdtChidaotuyen;
-import org.hibernate.Hibernate;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.sql.Time;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ChiDaoTuyenDTO {
     private int id;
     private String soquyetdinh;
-    private Time ngayquyetdinh;
+    private String ngayquyetdinh;
     private String sohopdong;
-    private Time ngayhopdong;
+    private String ngayhopdong;
     private String ghichu;
     private String noidung;
-    private Time ngaybd;
-    private Time ngaykt;
-    private Time ngaytao;
+    private String ngaybd;
+    private String ngaykt;
+    private String ngaytao;
     private Integer sobenhnhankham;
     private Integer sobenhnhankythuat;
     private Integer socanbochuyengiao;
@@ -50,14 +47,14 @@ public class ChiDaoTuyenDTO {
     public ChiDaoTuyenDTO(CdtChidaotuyen chidaotuyen) {
         id = chidaotuyen.getChidaotuyenid();
         soquyetdinh = chidaotuyen.getSoquyetdinh();
-        ngayquyetdinh = chidaotuyen.getNgayquyetdinh();
+        ngayquyetdinh = chidaotuyen.getNgayquyetdinh().toString();
         sohopdong = chidaotuyen.getSohopdong();
-        ngayhopdong = chidaotuyen.getNgayhopdong();
+        ngayhopdong = chidaotuyen.getNgayhopdong().toString();
         ghichu = chidaotuyen.getGhichu();
         noidung = chidaotuyen.getNoidung();
-        ngaybd = chidaotuyen.getNgaybd();
-        ngaykt = chidaotuyen.getNgaykt();
-        ngaytao = chidaotuyen.getNgaytao();
+        ngaybd = chidaotuyen.getNgaybd().toString();
+        ngaykt = chidaotuyen.getNgaykt().toString();
+        ngaytao = chidaotuyen.getNgaytao().toString();
         sobenhnhankham = chidaotuyen.getSobenhnhankham();
         sobenhnhankythuat = chidaotuyen.getSobenhnhankythuat();
         socanbochuyengiao = chidaotuyen.getSocanbochuyengiao();
@@ -96,11 +93,11 @@ public class ChiDaoTuyenDTO {
         this.soquyetdinh = soquyetdinh;
     }
 
-    public Time getNgayquyetdinh() {
+    public String getNgayquyetdinh() {
         return ngayquyetdinh;
     }
 
-    public void setNgayquyetdinh(Time ngayquyetdinh) {
+    public void setNgayquyetdinh(String ngayquyetdinh) {
         this.ngayquyetdinh = ngayquyetdinh;
     }
 
@@ -112,11 +109,11 @@ public class ChiDaoTuyenDTO {
         this.sohopdong = sohopdong;
     }
 
-    public Time getNgayhopdong() {
+    public String getNgayhopdong() {
         return ngayhopdong;
     }
 
-    public void setNgayhopdong(Time ngayhopdong) {
+    public void setNgayhopdong(String ngayhopdong) {
         this.ngayhopdong = ngayhopdong;
     }
 
@@ -136,27 +133,27 @@ public class ChiDaoTuyenDTO {
         this.noidung = noidung;
     }
 
-    public Time getNgaybd() {
+    public String getNgaybd() {
         return ngaybd;
     }
 
-    public void setNgaybd(Time ngaybd) {
+    public void setNgaybd(String ngaybd) {
         this.ngaybd = ngaybd;
     }
 
-    public Time getNgaykt() {
+    public String getNgaykt() {
         return ngaykt;
     }
 
-    public void setNgaykt(Time ngaykt) {
+    public void setNgaykt(String ngaykt) {
         this.ngaykt = ngaykt;
     }
 
-    public Time getNgaytao() {
+    public String getNgaytao() {
         return ngaytao;
     }
 
-    public void setNgaytao(Time ngaytao) {
+    public void setNgaytao(String ngaytao) {
         this.ngaytao = ngaytao;
     }
 

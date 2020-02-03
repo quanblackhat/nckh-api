@@ -41,16 +41,17 @@ public class ChiDaoTuyenResource {
 
     @PostMapping("")
     public int add(@RequestBody ChiDaoTuyenRequestEntity request) {
-        CdtChidaotuyen cdt = chiDaoTuyenMapper.toCdtChiDaoTuyen(request);
-        return chiDaoTuyenService.add(cdt);
+        CdtChidaotuyen chidaotuyen = chiDaoTuyenMapper.toCdtChiDaoTuyen(request);
+        return chiDaoTuyenService.add(chidaotuyen);
     }
 
     @PutMapping("")
-    public void update(@RequestBody CdtChidaotuyen chidaotuyen) {
-        if(chiDaoTuyenService.getById(chidaotuyen.getChidaotuyenid()).isPresent()) {
+    public void update(@RequestBody ChiDaoTuyenRequestEntity request) {
+        CdtChidaotuyen chidaotuyen = chiDaoTuyenMapper.toCdtChiDaoTuyen(request);
+        if(chiDaoTuyenService.getById(request.getChidaotuyenid()).isPresent()) {
+            chidaotuyen.setChidaotuyenid(request.getChidaotuyenid());
             chiDaoTuyenService.update(chidaotuyen);
         }
-
     }
 
     @DeleteMapping("/{id}")

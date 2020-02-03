@@ -4,6 +4,15 @@ import java.util.List;
 
 public class ChiDaoTuyenRequestEntity {
 
+    public int getChidaotuyenid() {
+        return chidaotuyenid;
+    }
+
+    public void setChidaotuyenid(int chidaotuyenid) {
+        this.chidaotuyenid = chidaotuyenid;
+    }
+
+    private int chidaotuyenid;
     private String soquyetdinh;
     private String ngayquyetdinh;
     private String sohopdong;
