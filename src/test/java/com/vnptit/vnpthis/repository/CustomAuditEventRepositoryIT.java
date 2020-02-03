@@ -3,7 +3,9 @@ package com.vnptit.vnpthis.repository;
 import com.vnptit.vnpthis.VnptHisBackendApp;
 import com.vnptit.vnpthis.config.Constants;
 import com.vnptit.vnpthis.config.audit.AuditEventConverter;
-import com.vnptit.vnpthis.domain.PersistentAuditEvent;
+import com.vnptit.vnpthis.domain.jhipster.PersistentAuditEvent;
+import com.vnptit.vnpthis.repository.jhipster.CustomAuditEventRepository;
+import com.vnptit.vnpthis.repository.jhipster.PersistenceAuditEventRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static com.vnptit.vnpthis.repository.CustomAuditEventRepository.EVENT_DATA_COLUMN_MAX_LENGTH;
+import static com.vnptit.vnpthis.repository.jhipster.CustomAuditEventRepository.EVENT_DATA_COLUMN_MAX_LENGTH;
 
 /**
  * Integration tests for {@link CustomAuditEventRepository}.

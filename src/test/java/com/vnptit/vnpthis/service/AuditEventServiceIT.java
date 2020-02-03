@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service;
 
-import com.vnptit.vnpthis.domain.PersistentAuditEvent;
-import com.vnptit.vnpthis.repository.PersistenceAuditEventRepository;
+import com.vnptit.vnpthis.domain.jhipster.PersistentAuditEvent;
+import com.vnptit.vnpthis.repository.jhipster.PersistenceAuditEventRepository;
 import com.vnptit.vnpthis.VnptHisBackendApp;
 import io.github.jhipster.config.JHipsterProperties;
 import org.junit.jupiter.api.BeforeEach;
@@ -60,13 +60,13 @@ public class AuditEventServiceIT {
         persistenceAuditEventRepository.save(auditEventOld);
         persistenceAuditEventRepository.save(auditEventWithinRetention);
         persistenceAuditEventRepository.save(auditEventNew);
-        
+
         persistenceAuditEventRepository.flush();
-        
+
         auditEventService.removeOldAuditEvents();
-        
+
         persistenceAuditEventRepository.flush();
-        
+
         assertThat(persistenceAuditEventRepository.findAll().size()).isEqualTo(2);
         assertThat(persistenceAuditEventRepository.findByPrincipal("test-user-old")).isEmpty();
         assertThat(persistenceAuditEventRepository.findByPrincipal("test-user-retention")).isNotEmpty();

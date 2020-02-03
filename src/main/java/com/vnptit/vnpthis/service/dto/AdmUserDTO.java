@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.service.dto;
 
-import com.vnptit.vnpthis.domain.AdmUser;
+import com.vnptit.vnpthis.domain.cdt.AdmUser;
 import com.vnptit.vnpthis.security.AuthoritiesConstants;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.web.rest.cdt;
 
-import com.vnptit.vnpthis.domain.CdtLydocongtac;
+import com.vnptit.vnpthis.domain.cdt.CdtLydocongtac;
 import com.vnptit.vnpthis.service.cdt.LyDoCongTacService;
 import com.vnptit.vnpthis.service.dto.LyDoCongTacDTO;
 import org.springframework.beans.factory.annotation.Autowired;

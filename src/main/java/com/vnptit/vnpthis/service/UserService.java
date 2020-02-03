@@ -1,12 +1,12 @@
 package com.vnptit.vnpthis.service;
 
 import com.vnptit.vnpthis.config.Constants;
-import com.vnptit.vnpthis.domain.AdmUser;
-import com.vnptit.vnpthis.domain.Authority;
-import com.vnptit.vnpthis.domain.User;
-import com.vnptit.vnpthis.repository.AdmUserRepository;
-import com.vnptit.vnpthis.repository.AuthorityRepository;
-import com.vnptit.vnpthis.repository.UserRepository;
+import com.vnptit.vnpthis.domain.cdt.AdmUser;
+import com.vnptit.vnpthis.domain.jhipster.Authority;
+import com.vnptit.vnpthis.domain.jhipster.User;
+import com.vnptit.vnpthis.repository.cdt.AdmUserRepository;
+import com.vnptit.vnpthis.repository.jhipster.AuthorityRepository;
+import com.vnptit.vnpthis.repository.jhipster.UserRepository;
 import com.vnptit.vnpthis.security.AuthoritiesConstants;
 import com.vnptit.vnpthis.security.SecurityUtils;
 import com.vnptit.vnpthis.service.dto.UserDTO;

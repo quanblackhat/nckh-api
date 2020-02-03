@@ -2,8 +2,8 @@ package com.vnptit.vnpthis.service;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
 import com.vnptit.vnpthis.config.Constants;
-import com.vnptit.vnpthis.domain.User;
-import com.vnptit.vnpthis.repository.UserRepository;
+import com.vnptit.vnpthis.domain.jhipster.User;
+import com.vnptit.vnpthis.repository.jhipster.UserRepository;
 import com.vnptit.vnpthis.service.dto.UserDTO;
 
 import io.github.jhipster.security.RandomUtil;

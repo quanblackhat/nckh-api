@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.config.audit;
 
-import com.vnptit.vnpthis.domain.PersistentAuditEvent;
+import com.vnptit.vnpthis.domain.jhipster.PersistentAuditEvent;
 
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;

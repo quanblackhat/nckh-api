@@ -2,8 +2,8 @@ package com.vnptit.vnpthis.service.dto;
 
 import com.vnptit.vnpthis.config.Constants;
 
-import com.vnptit.vnpthis.domain.Authority;
-import com.vnptit.vnpthis.domain.User;
+import com.vnptit.vnpthis.domain.jhipster.Authority;
+import com.vnptit.vnpthis.domain.jhipster.User;
 
 import javax.validation.constraints.*;
 import java.time.Instant;

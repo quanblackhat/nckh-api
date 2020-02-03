@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.mapper;
 
-import com.vnptit.vnpthis.domain.Authority;
-import com.vnptit.vnpthis.domain.User;
+import com.vnptit.vnpthis.domain.jhipster.Authority;
+import com.vnptit.vnpthis.domain.jhipster.User;
 import com.vnptit.vnpthis.service.dto.UserDTO;
 
 import org.springframework.stereotype.Service;

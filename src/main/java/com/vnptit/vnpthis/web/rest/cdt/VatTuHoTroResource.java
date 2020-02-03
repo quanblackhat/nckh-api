@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.web.rest.cdt;
 
-import com.vnptit.vnpthis.domain.CdtVattuhotro;
+import com.vnptit.vnpthis.domain.cdt.CdtVattuhotro;
 import com.vnptit.vnpthis.service.cdt.VatTuHoTroService;
 import com.vnptit.vnpthis.service.dto.VatTuHoTroDTO;
 import org.springframework.beans.factory.annotation.Autowired;

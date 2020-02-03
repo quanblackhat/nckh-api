@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.service.dto;
 
-import com.vnptit.vnpthis.domain.CdtLydocongtac;
+import com.vnptit.vnpthis.domain.cdt.CdtLydocongtac;
 
 public class LyDoCongTacDTO {
     private int id;

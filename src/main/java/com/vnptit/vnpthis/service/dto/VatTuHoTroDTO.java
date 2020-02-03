@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.service.dto;
 
-import com.vnptit.vnpthis.domain.CdtVattuhotro;
+import com.vnptit.vnpthis.domain.cdt.CdtVattuhotro;
 
 public class VatTuHoTroDTO {
     private int id;

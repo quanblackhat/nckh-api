@@ -2,7 +2,7 @@ package com.vnptit.vnpthis.service;
 
 import io.github.jhipster.config.JHipsterProperties;
 import com.vnptit.vnpthis.config.audit.AuditEventConverter;
-import com.vnptit.vnpthis.repository.PersistenceAuditEventRepository;
+import com.vnptit.vnpthis.repository.jhipster.PersistenceAuditEventRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.actuate.audit.AuditEvent;

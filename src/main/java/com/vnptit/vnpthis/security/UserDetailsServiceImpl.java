@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.security;
 
-import com.vnptit.vnpthis.domain.AdmUser;
-import com.vnptit.vnpthis.repository.AdmUserRepository;
+import com.vnptit.vnpthis.domain.cdt.AdmUser;
+import com.vnptit.vnpthis.repository.cdt.AdmUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

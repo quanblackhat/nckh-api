@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.web.rest.cdt;
 
-import com.vnptit.vnpthis.domain.CdtKetquacongtac;
+import com.vnptit.vnpthis.domain.cdt.CdtKetquacongtac;
 import com.vnptit.vnpthis.service.cdt.KetQuaCongTacService;
 import com.vnptit.vnpthis.service.dto.KetQuaCongTacDTO;
 import org.springframework.beans.factory.annotation.Autowired;

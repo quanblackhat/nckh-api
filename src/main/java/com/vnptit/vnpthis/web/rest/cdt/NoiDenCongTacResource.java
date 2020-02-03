@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.web.rest.cdt;
 
 
-import com.vnptit.vnpthis.domain.CdtNoidencongtac;
+import com.vnptit.vnpthis.domain.cdt.CdtNoidencongtac;
 import com.vnptit.vnpthis.service.cdt.NoiDenCongTacService;
 import com.vnptit.vnpthis.service.dto.NoiDenCongTacDTO;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.web.rest.cdt;
 
-import com.vnptit.vnpthis.domain.CdtChidaotuyen;
-import com.vnptit.vnpthis.domain.ChiDaoTuyenRequestEntity;
+import com.vnptit.vnpthis.domain.cdt.CdtChidaotuyen;
+import com.vnptit.vnpthis.domain.cdt.ChiDaoTuyenRequestEntity;
 import com.vnptit.vnpthis.service.cdt.ChiDaoTuyenService;
 import com.vnptit.vnpthis.service.dto.ChiDaoTuyenDTO;
 import com.vnptit.vnpthis.service.mapper.ChiDaoTuyenMapper;

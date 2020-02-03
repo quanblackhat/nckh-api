@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.service.cdt;
 
-import com.vnptit.vnpthis.domain.CdtNoidencongtac;
+import com.vnptit.vnpthis.domain.cdt.CdtNoidencongtac;
 import com.vnptit.vnpthis.repository.cdt.NoiDenCongTacRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

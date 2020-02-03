@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.mapper;
 
-import com.vnptit.vnpthis.domain.CdtChidaotuyen;
-import com.vnptit.vnpthis.domain.ChiDaoTuyenRequestEntity;
+import com.vnptit.vnpthis.domain.cdt.CdtChidaotuyen;
+import com.vnptit.vnpthis.domain.cdt.ChiDaoTuyenRequestEntity;
 import com.vnptit.vnpthis.repository.cdt.*;
 import com.vnptit.vnpthis.utils.DateConverter;
 import org.springframework.beans.factory.annotation.Autowired;

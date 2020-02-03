@@ -1,9 +1,9 @@
 package com.vnptit.vnpthis.web.rest;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
-import com.vnptit.vnpthis.domain.Authority;
-import com.vnptit.vnpthis.domain.User;
-import com.vnptit.vnpthis.repository.UserRepository;
+import com.vnptit.vnpthis.domain.jhipster.Authority;
+import com.vnptit.vnpthis.domain.jhipster.User;
+import com.vnptit.vnpthis.repository.jhipster.UserRepository;
 import com.vnptit.vnpthis.security.AuthoritiesConstants;
 import com.vnptit.vnpthis.service.MailService;
 import com.vnptit.vnpthis.service.UserService;

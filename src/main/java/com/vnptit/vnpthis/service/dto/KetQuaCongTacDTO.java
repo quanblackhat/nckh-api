@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.service.dto;
 
-import com.vnptit.vnpthis.domain.CdtKetquacongtac;
+import com.vnptit.vnpthis.domain.cdt.CdtKetquacongtac;
 
 public class KetQuaCongTacDTO {
     private int id;

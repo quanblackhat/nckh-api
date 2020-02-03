@@ -1,7 +1,9 @@
 package com.vnptit.vnpthis.service.dto;
 
-import com.vnptit.vnpthis.domain.CdtChidaotuyen;
-import com.vnptit.vnpthis.domain.CdtKythuathotro;
+import com.vnptit.vnpthis.domain.cdt.CdtChidaotuyen;
+import org.hibernate.Hibernate;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.sql.Time;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -21,7 +23,26 @@ public class ChiDaoTuyenDTO {
     private Integer sobenhnhankythuat;
     private Integer socanbochuyengiao;
     private String lydocongtac;
+    private int lydocongtacId;
     private String ketquacongtac;
+
+    public int getLydocongtacId() {
+        return lydocongtacId;
+    }
+
+    public void setLydocongtacId(int lydocongtacId) {
+        this.lydocongtacId = lydocongtacId;
+    }
+
+    public int getKetquacongtacId() {
+        return ketquacongtacId;
+    }
+
+    public void setKetquacongtacId(int ketquacongtacId) {
+        this.ketquacongtacId = ketquacongtacId;
+    }
+
+    private int ketquacongtacId;
     private List<String> danhsachKiThuatHoTro;
     private List<String> danhsachVatTuHoTro;
     private List<String> danhsachNoiDenCongTac;
@@ -41,7 +62,10 @@ public class ChiDaoTuyenDTO {
         sobenhnhankythuat = chidaotuyen.getSobenhnhankythuat();
         socanbochuyengiao = chidaotuyen.getSocanbochuyengiao();
         lydocongtac = chidaotuyen.getLydocongtac().getTenlydo();
+        lydocongtacId = chidaotuyen.getLydocongtac().getLydocongtacid();
         ketquacongtac = chidaotuyen.getKetquacongtac().getTenketqua();
+        ketquacongtacId = chidaotuyen.getKetquacongtac().getKetquacongtacid();
+
         danhsachKiThuatHoTro = chidaotuyen.getDanhSachKyThuatHoTro()
                                 .stream()
                                 .map(kythuathotro -> kythuathotro.getTenkythuat())

@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.cdt;
 
 
-import com.vnptit.vnpthis.domain.CdtVattuhotro;
+import com.vnptit.vnpthis.domain.cdt.CdtVattuhotro;
 import com.vnptit.vnpthis.repository.cdt.VatTuHoTroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

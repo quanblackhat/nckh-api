@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.service.mapper;
 
-import com.vnptit.vnpthis.domain.User;
+import com.vnptit.vnpthis.domain.jhipster.User;
 import com.vnptit.vnpthis.service.dto.UserDTO;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;

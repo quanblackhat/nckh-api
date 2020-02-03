@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.security;
 
-import com.vnptit.vnpthis.domain.User;
-import com.vnptit.vnpthis.repository.UserRepository;
+import com.vnptit.vnpthis.domain.jhipster.User;
+import com.vnptit.vnpthis.repository.jhipster.UserRepository;
 import org.hibernate.validator.internal.constraintvalidators.hv.EmailValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +10,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;

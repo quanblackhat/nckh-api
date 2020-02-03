@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.service;
 
-import com.vnptit.vnpthis.domain.User;
+import com.vnptit.vnpthis.domain.jhipster.User;
 
 import io.github.jhipster.config.JHipsterProperties;
 

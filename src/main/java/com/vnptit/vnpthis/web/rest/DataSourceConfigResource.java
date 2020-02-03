@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.web.rest;
 
-import com.vnptit.vnpthis.domain.DataSourceConfig;
-import com.vnptit.vnpthis.repository.DataSourceConfigRepository;
+import com.vnptit.vnpthis.domain.jhipster.DataSourceConfig;
+import com.vnptit.vnpthis.repository.jhipster.DataSourceConfigRepository;
 import com.vnptit.vnpthis.web.rest.errors.BadRequestAlertException;
 
 import io.github.jhipster.web.util.HeaderUtil;
@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional; 
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * REST controller for managing {@link com.vnptit.vnpthis.domain.DataSourceConfig}.
+ * REST controller for managing {@link DataSourceConfig}.
  */
 @RestController
 @RequestMapping("/api")

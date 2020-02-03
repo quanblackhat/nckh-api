@@ -3,7 +3,7 @@ package com.vnptit.vnpthis.service;
 import com.vnptit.vnpthis.config.Constants;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
-import com.vnptit.vnpthis.domain.User;
+import com.vnptit.vnpthis.domain.jhipster.User;
 import io.github.jhipster.config.JHipsterProperties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

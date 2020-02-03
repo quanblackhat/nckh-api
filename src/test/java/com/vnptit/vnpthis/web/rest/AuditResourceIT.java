@@ -3,8 +3,8 @@ package com.vnptit.vnpthis.web.rest;
 import com.vnptit.vnpthis.VnptHisBackendApp;
 import io.github.jhipster.config.JHipsterProperties;
 import com.vnptit.vnpthis.config.audit.AuditEventConverter;
-import com.vnptit.vnpthis.domain.PersistentAuditEvent;
-import com.vnptit.vnpthis.repository.PersistenceAuditEventRepository;
+import com.vnptit.vnpthis.domain.jhipster.PersistentAuditEvent;
+import com.vnptit.vnpthis.repository.jhipster.PersistenceAuditEventRepository;
 
 import com.vnptit.vnpthis.service.AuditEventService;
 import org.junit.jupiter.api.BeforeEach;

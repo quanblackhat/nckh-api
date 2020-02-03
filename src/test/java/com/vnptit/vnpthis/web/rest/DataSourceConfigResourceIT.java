@@ -1,8 +1,8 @@
 package com.vnptit.vnpthis.web.rest;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
-import com.vnptit.vnpthis.domain.DataSourceConfig;
-import com.vnptit.vnpthis.repository.DataSourceConfigRepository;
+import com.vnptit.vnpthis.domain.jhipster.DataSourceConfig;
+import com.vnptit.vnpthis.repository.jhipster.DataSourceConfigRepository;
 import com.vnptit.vnpthis.web.rest.errors.ExceptionTranslator;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -267,7 +267,7 @@ public class DataSourceConfigResourceIT {
             .andExpect(jsonPath("$.[*].dbUsername").value(hasItem(DEFAULT_DB_USERNAME)))
             .andExpect(jsonPath("$.[*].dbPassword").value(hasItem(DEFAULT_DB_PASSWORD)));
     }
-    
+
     @Test
     @Transactional
     public void getDataSourceConfig() throws Exception {

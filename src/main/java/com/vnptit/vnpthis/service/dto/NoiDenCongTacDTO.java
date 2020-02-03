@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.dto;
 
 
-import com.vnptit.vnpthis.domain.CdtNoidencongtac;
+import com.vnptit.vnpthis.domain.cdt.CdtNoidencongtac;
 
 public class NoiDenCongTacDTO {
     private int id;
