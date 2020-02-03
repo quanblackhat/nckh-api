@@ -44,7 +44,9 @@ public class KiThuatHoTroResource {
 
     @PutMapping("")
     public void update(@RequestBody CdtKythuathotro kythuathotro) {
-        kiThuatHoTroService.update(kythuathotro);
+        if(kiThuatHoTroService.getById(kythuathotro.getKythuathotroid()).isPresent()) {
+            kiThuatHoTroService.update(kythuathotro);
+        }
     }
 
     @DeleteMapping("/{id}")

@@ -47,7 +47,10 @@ public class ChiDaoTuyenResource {
 
     @PutMapping("")
     public void update(@RequestBody CdtChidaotuyen chidaotuyen) {
-        chiDaoTuyenService.update(chidaotuyen);
+        if(chiDaoTuyenService.getById(chidaotuyen.getChidaotuyenid()).isPresent()) {
+            chiDaoTuyenService.update(chidaotuyen);
+        }
+
     }
 
     @DeleteMapping("/{id}")

@@ -46,7 +46,9 @@ public class KetQuaCongTacResource {
 
     @PutMapping("")
     public void update(@RequestBody CdtKetquacongtac ketquacongtac) {
-        if(ketquacongtac != null) ketQuaCongTacService.update(ketquacongtac);
+        if(ketQuaCongTacService.getById(ketquacongtac.getKetquacongtacid()).isPresent()) {
+            ketQuaCongTacService.update(ketquacongtac);
+        }
     }
 
     @DeleteMapping("/{id}")

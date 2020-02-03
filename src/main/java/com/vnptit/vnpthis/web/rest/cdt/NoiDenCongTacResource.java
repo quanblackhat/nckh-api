@@ -45,7 +45,10 @@ public class NoiDenCongTacResource {
 
     @PutMapping("")
     public void update(@RequestBody CdtNoidencongtac noidencongtac) {
-        noiDenCongTacService.update(noidencongtac);
+        if(noiDenCongTacService.getById(noidencongtac.getNoidencongtacid()).isPresent()) {
+            noiDenCongTacService.update(noidencongtac);
+        }
+
     }
 
     @DeleteMapping("/{id}")

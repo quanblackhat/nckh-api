@@ -16,7 +16,7 @@ public class CdtKetquacongtac {
     private Byte thutusapxep;
     private int csytid;
 
-    @OneToMany(mappedBy = "ketquacongtac")
+    @OneToMany(mappedBy = "ketquacongtac", cascade = CascadeType.PERSIST)
     private Set<CdtChidaotuyen> chidaotuyen = new HashSet<>();
 
     public Set<CdtChidaotuyen> getChidaotuyen() {

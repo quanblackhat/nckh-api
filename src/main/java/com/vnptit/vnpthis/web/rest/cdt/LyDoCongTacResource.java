@@ -44,7 +44,10 @@ public class LyDoCongTacResource {
 
     @PutMapping("")
     public void update(@RequestBody CdtLydocongtac lydocongtac) {
-        lyDoCongTacService.update(lydocongtac);
+        if(lyDoCongTacService.getById(lydocongtac.getLydocongtacid()).isPresent()) {
+            lyDoCongTacService.update(lydocongtac);
+        }
+
     }
 
     @DeleteMapping("/{id}")

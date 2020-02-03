@@ -44,7 +44,9 @@ public class VatTuHoTroResource {
 
     @PutMapping("")
     public void update(@RequestBody CdtVattuhotro vattuhotro) {
-        vatTuHoTroService.update(vattuhotro);
+        if(vatTuHoTroService.getById(vattuhotro.getVattuhotroid()).isPresent()) {
+            vatTuHoTroService.update(vattuhotro);
+        }
     }
 
     @DeleteMapping("/{id}")
