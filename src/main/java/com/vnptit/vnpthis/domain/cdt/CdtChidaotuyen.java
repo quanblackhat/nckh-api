@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.domain.cdt;
 
 import javax.persistence.*;
-import java.sql.Time;
+import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,15 +13,15 @@ public class CdtChidaotuyen {
     @SequenceGenerator(name = "SEQUENCE_GENERATOR")
     private int chidaotuyenid;
     private String soquyetdinh;
-    private Time ngayquyetdinh;
+    private Date ngayquyetdinh;
     private String sohopdong;
-    private Time ngayhopdong;
+    private Date ngayhopdong;
     private String ghichu;
     private int lydocongtacid;
     private String noidung;
-    private Time ngaybd;
-    private Time ngaykt;
-    private Time ngaytao;
+    private Date ngaybd;
+    private Date ngaykt;
+    private Date ngaytao;
     private Integer sobenhnhankham;
     private Integer sobenhnhankythuat;
     private Integer socanbochuyengiao;
@@ -93,11 +93,11 @@ public class CdtChidaotuyen {
 
     @Basic
     @Column(name = "NGAYQUYETDINH", nullable = true)
-    public Time getNgayquyetdinh() {
+    public Date getNgayquyetdinh() {
         return ngayquyetdinh;
     }
 
-    public void setNgayquyetdinh(Time ngayquyetdinh) {
+    public void setNgayquyetdinh(Date ngayquyetdinh) {
         this.ngayquyetdinh = ngayquyetdinh;
     }
 
@@ -113,11 +113,11 @@ public class CdtChidaotuyen {
 
     @Basic
     @Column(name = "NGAYHOPDONG", nullable = true)
-    public Time getNgayhopdong() {
+    public Date getNgayhopdong() {
         return ngayhopdong;
     }
 
-    public void setNgayhopdong(Time ngayhopdong) {
+    public void setNgayhopdong(Date ngayhopdong) {
         this.ngayhopdong = ngayhopdong;
     }
 
@@ -153,31 +153,31 @@ public class CdtChidaotuyen {
 
     @Basic
     @Column(name = "NGAYBD", nullable = true)
-    public Time getNgaybd() {
+    public Date getNgaybd() {
         return ngaybd;
     }
 
-    public void setNgaybd(Time ngaybd) {
+    public void setNgaybd(Date ngaybd) {
         this.ngaybd = ngaybd;
     }
 
     @Basic
     @Column(name = "NGAYKT", nullable = true)
-    public Time getNgaykt() {
+    public Date getNgaykt() {
         return ngaykt;
     }
 
-    public void setNgaykt(Time ngaykt) {
+    public void setNgaykt(Date ngaykt) {
         this.ngaykt = ngaykt;
     }
 
     @Basic
     @Column(name = "NGAYTAO", nullable = true)
-    public Time getNgaytao() {
+    public Date getNgaytao() {
         return ngaytao;
     }
 
-    public void setNgaytao(Time ngaytao) {
+    public void setNgaytao(Date ngaytao) {
         this.ngaytao = ngaytao;
     }
 

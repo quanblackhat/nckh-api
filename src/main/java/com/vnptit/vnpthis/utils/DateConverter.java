@@ -1,14 +1,14 @@
 package com.vnptit.vnpthis.utils;
-import java.sql.Time;
+import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class DateConverter {
-    private static SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-DD");
+    private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
-    public static Time convertStringToTime(String s) {
+    public static Date convertStringToTime(String s) {
         try {
-            return new Time(sdf.parse(s).getTime());
+            return new Date(sdf.parse(s).getTime());
         } catch (ParseException e) {
             e.printStackTrace();
         }
