@@ -22,6 +22,38 @@ public class ChiDaoTuyenDTO {
     private String lydocongtac;
     private int lydocongtacId;
     private String ketquacongtac;
+    private int ketquacongtacId;
+
+    public List<Integer> getDanhsachKiThuatHoTroID() {
+        return danhsachKiThuatHoTroID;
+    }
+
+    public void setDanhsachKiThuatHoTroID(List<Integer> danhsachKiThuatHoTroID) {
+        this.danhsachKiThuatHoTroID = danhsachKiThuatHoTroID;
+    }
+
+    public List<Integer> getDanhsachVatTuHoTroID() {
+        return danhsachVatTuHoTroID;
+    }
+
+    public void setDanhsachVatTuHoTroID(List<Integer> danhsachVatTuHoTroID) {
+        this.danhsachVatTuHoTroID = danhsachVatTuHoTroID;
+    }
+
+    public List<Integer> getDanhsachNoiDenCongTacID() {
+        return danhsachNoiDenCongTacID;
+    }
+
+    public void setDanhsachNoiDenCongTacID(List<Integer> danhsachNoiDenCongTacID) {
+        this.danhsachNoiDenCongTacID = danhsachNoiDenCongTacID;
+    }
+
+    private List<String> danhsachKiThuatHoTro;
+    private List<String> danhsachVatTuHoTro;
+    private List<String> danhsachNoiDenCongTac;
+    private List<Integer> danhsachKiThuatHoTroID;
+    private List<Integer> danhsachVatTuHoTroID;
+    private List<Integer> danhsachNoiDenCongTacID;
 
     public int getLydocongtacId() {
         return lydocongtacId;
@@ -39,10 +71,7 @@ public class ChiDaoTuyenDTO {
         this.ketquacongtacId = ketquacongtacId;
     }
 
-    private int ketquacongtacId;
-    private List<String> danhsachKiThuatHoTro;
-    private List<String> danhsachVatTuHoTro;
-    private List<String> danhsachNoiDenCongTac;
+
 
     public ChiDaoTuyenDTO(CdtChidaotuyen chidaotuyen) {
         id = chidaotuyen.getChidaotuyenid();
@@ -67,14 +96,26 @@ public class ChiDaoTuyenDTO {
                                 .stream()
                                 .map(kythuathotro -> kythuathotro.getTenkythuat())
                                 .collect(Collectors.toList());
+        danhsachKiThuatHoTroID = chidaotuyen.getDanhSachKyThuatHoTro()
+                                .stream()
+                                .map(kythuathotro -> kythuathotro.getKythuathotroid())
+                                .collect(Collectors.toList());
         danhsachVatTuHoTro = chidaotuyen.getDanhSachVatTuHoTro()
                                 .stream()
                                 .map(vattuhotro -> vattuhotro.getTenvattu())
                                 .collect(Collectors.toList());
+        danhsachVatTuHoTroID = chidaotuyen.getDanhSachVatTuHoTro()
+            .stream()
+            .map(vattuhotro -> vattuhotro.getVattuhotroid())
+            .collect(Collectors.toList());
         danhsachNoiDenCongTac = chidaotuyen.getDanhSachNoiDen()
                                 .stream()
                                 .map(noidencongtac -> noidencongtac.getTennoiden())
                                 .collect(Collectors.toList());
+        danhsachNoiDenCongTacID = chidaotuyen.getDanhSachNoiDen()
+            .stream()
+            .map(noidencongtac -> noidencongtac.getNoidencongtacid())
+            .collect(Collectors.toList());
     }
 
     public int getId() {
