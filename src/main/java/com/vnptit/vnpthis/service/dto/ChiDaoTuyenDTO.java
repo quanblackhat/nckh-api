@@ -47,14 +47,14 @@ public class ChiDaoTuyenDTO {
     public ChiDaoTuyenDTO(CdtChidaotuyen chidaotuyen) {
         id = chidaotuyen.getChidaotuyenid();
         soquyetdinh = chidaotuyen.getSoquyetdinh();
-        ngayquyetdinh = chidaotuyen.getNgayquyetdinh().toString();
+        ngayquyetdinh = (chidaotuyen.getNgayquyetdinh() != null) ? chidaotuyen.getNgayquyetdinh().toString() : null ;
         sohopdong = chidaotuyen.getSohopdong();
-        ngayhopdong = chidaotuyen.getNgayhopdong().toString();
+        ngayhopdong = (chidaotuyen.getNgayhopdong() != null) ? chidaotuyen.getNgayhopdong().toString() : null;
         ghichu = chidaotuyen.getGhichu();
         noidung = chidaotuyen.getNoidung();
-        ngaybd = chidaotuyen.getNgaybd().toString();
-        ngaykt = chidaotuyen.getNgaykt().toString();
-        ngaytao = chidaotuyen.getNgaytao().toString();
+        ngaybd = (chidaotuyen.getNgaybd() != null) ? chidaotuyen.getNgaybd().toString() : null;
+        ngaykt = (chidaotuyen.getNgaykt() != null) ? chidaotuyen.getNgaykt().toString() : null;
+        ngaytao = (chidaotuyen.getNgaytao() != null) ? chidaotuyen.getNgaytao().toString() : null;
         sobenhnhankham = chidaotuyen.getSobenhnhankham();
         sobenhnhankythuat = chidaotuyen.getSobenhnhankythuat();
         socanbochuyengiao = chidaotuyen.getSocanbochuyengiao();
