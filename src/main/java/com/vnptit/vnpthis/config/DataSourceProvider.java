@@ -11,34 +11,34 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.List;
 
-@Component
+//@Component
 public class DataSourceProvider {
-    public HashMap<String, DataSource> dataSources = new HashMap<>();
-
-    @Autowired
-    private DataSourceConfigRepository dsConfigRepository;
-
-    @PostConstruct
-    public void prepareDatasource() {
-        List<DataSourceConfig> list = dsConfigRepository.findAll();
-        for(DataSourceConfig ds: list) {
-            DataSource dataSource = createDatasource(ds);
-            if(dataSource != null) dataSources.put(ds.getDbName(), dataSource);
-        }
-    }
-
-    private DataSource createDatasource(DataSourceConfig ds) {
-        if(ds != null) {
-            DataSource dataSource = DataSourceBuilder
-                                    .create()
-                                    .driverClassName(ds.getDriverClassName())
-                                    .username(ds.getDbUsername())
-                                    .password(ds.getDbPassword())
-                                    .url(ds.getDbUrl())
-                                    .build();
-            return dataSource;
-        }
-        return null;
-    }
+//    public HashMap<String, DataSource> dataSources = new HashMap<>();
+//
+//    @Autowired
+//    private DataSourceConfigRepository dsConfigRepository;
+//
+//    @PostConstruct
+//    public void prepareDatasource() {
+//        List<DataSourceConfig> list = dsConfigRepository.findAll();
+//        for(DataSourceConfig ds: list) {
+//            DataSource dataSource = createDatasource(ds);
+//            if(dataSource != null) dataSources.put(ds.getDbName(), dataSource);
+//        }
+//    }
+//
+//    private DataSource createDatasource(DataSourceConfig ds) {
+//        if(ds != null) {
+//            DataSource dataSource = DataSourceBuilder
+//                                    .create()
+//                                    .driverClassName(ds.getDriverClassName())
+//                                    .username(ds.getDbUsername())
+//                                    .password(ds.getDbPassword())
+//                                    .url(ds.getDbUrl())
+//                                    .build();
+//            return dataSource;
+//        }
+//        return null;
+//    }
 
 }

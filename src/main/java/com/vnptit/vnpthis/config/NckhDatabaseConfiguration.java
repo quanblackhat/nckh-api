@@ -17,47 +17,47 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.HashMap;
 
-@Configuration
-@EnableTransactionManagement
-@EnableJpaRepositories(
-    entityManagerFactoryRef = "nckhEntityManagerFactory",
-    transactionManagerRef = "nckhTransactionManager",
-    basePackages = {"com.vnptit.vnpthis.repository.nckh"}
-)
+//@Configuration
+//@EnableTransactionManagement
+//@EnableJpaRepositories(
+//    entityManagerFactoryRef = "nckhEntityManagerFactory",
+//    transactionManagerRef = "nckhTransactionManager",
+//    basePackages = {"com.vnptit.vnpthis.repository.nckh"}
+//)
 public class NckhDatabaseConfiguration {
 
-    @Value("${spring.jpa.hibernate.dialect}")
-    private String dialect;
-
-    @Autowired
-    private DataSourceProvider provider;
-
-    @Bean
-    public DataSource nckhDatasource() {
-        return provider.dataSources.get(DatabaseName.NGHIEN_CUU_KHOA_HOC);
-    }
-
-    @Bean
-    public LocalContainerEntityManagerFactoryBean nckhEntityManagerFactory(@Qualifier("nckhDatasource") DataSource dataSource) {
-        LocalContainerEntityManagerFactoryBean em
-            = new LocalContainerEntityManagerFactoryBean();
-        em.setDataSource(dataSource);
-        em.setPackagesToScan(
-            new String[] { "com.vnptit.vnpthis.domain.nckh" });
-
-        HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-        em.setJpaVendorAdapter(vendorAdapter);
-
-        HashMap<String, Object> properties = new HashMap<>();
-        properties.put("hibernate.dialect", dialect);
-
-        em.setJpaPropertyMap(properties);
-        return em;
-    }
-
-    @Bean
-    public PlatformTransactionManager nckhTransactionManager(
-        @Qualifier("nckhEntityManagerFactory") EntityManagerFactory entityManagerFactory) {
-        return new JpaTransactionManager(entityManagerFactory);
-    }
+//    @Value("${spring.jpa.hibernate.dialect}")
+//    private String dialect;
+//
+//    @Autowired
+//    private DataSourceProvider provider;
+//
+//    @Bean
+//    public DataSource nckhDatasource() {
+//        return provider.dataSources.get(DatabaseName.NGHIEN_CUU_KHOA_HOC);
+//    }
+//
+//    @Bean
+//    public LocalContainerEntityManagerFactoryBean nckhEntityManagerFactory(@Qualifier("nckhDatasource") DataSource dataSource) {
+//        LocalContainerEntityManagerFactoryBean em
+//            = new LocalContainerEntityManagerFactoryBean();
+//        em.setDataSource(dataSource);
+//        em.setPackagesToScan(
+//            new String[] { "com.vnptit.vnpthis.domain.nckh" });
+//
+//        HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+//        em.setJpaVendorAdapter(vendorAdapter);
+//
+//        HashMap<String, Object> properties = new HashMap<>();
+//        properties.put("hibernate.dialect", dialect);
+//
+//        em.setJpaPropertyMap(properties);
+//        return em;
+//    }
+//
+//    @Bean
+//    public PlatformTransactionManager nckhTransactionManager(
+//        @Qualifier("nckhEntityManagerFactory") EntityManagerFactory entityManagerFactory) {
+//        return new JpaTransactionManager(entityManagerFactory);
+//    }
 }

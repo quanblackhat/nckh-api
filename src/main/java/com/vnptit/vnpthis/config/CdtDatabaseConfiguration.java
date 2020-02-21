@@ -18,47 +18,47 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.HashMap;
 
-@Configuration
-@EnableTransactionManagement
-@EnableJpaRepositories(
-    entityManagerFactoryRef = "cdtEntityManagerFactory",
-    transactionManagerRef = "cdtTransactionManager",
-    basePackages = {"com.vnptit.vnpthis.repository.cdt"}
-)
+//@Configuration
+//@EnableTransactionManagement
+//@EnableJpaRepositories(
+//    entityManagerFactoryRef = "cdtEntityManagerFactory",
+//    transactionManagerRef = "cdtTransactionManager",
+//    basePackages = {"com.vnptit.vnpthis.repository.cdt"}
+//)
 public class CdtDatabaseConfiguration {
 
-    @Value("${spring.jpa.hibernate.dialect}")
-    private String dialect;
-
-    @Autowired
-    private DataSourceProvider provider;
-
-    @Bean
-    public DataSource cdtDatasource() {
-        return provider.dataSources.get(DatabaseName.CHI_DAO_TUYEN);
-    }
-
-    @Bean
-    public LocalContainerEntityManagerFactoryBean cdtEntityManagerFactory(@Qualifier("cdtDatasource") DataSource dataSource) {
-        LocalContainerEntityManagerFactoryBean em
-            = new LocalContainerEntityManagerFactoryBean();
-        em.setDataSource(dataSource);
-        em.setPackagesToScan(
-            new String[] { "com.vnptit.vnpthis.domain.cdt" });
-
-        HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-        em.setJpaVendorAdapter(vendorAdapter);
-
-        HashMap<String, Object> properties = new HashMap<>();
-        properties.put("hibernate.dialect", dialect);
-
-        em.setJpaPropertyMap(properties);
-        return em;
-    }
-
-    @Bean
-    public PlatformTransactionManager cdtTransactionManager(
-        @Qualifier("cdtEntityManagerFactory") EntityManagerFactory entityManagerFactory) {
-        return new JpaTransactionManager(entityManagerFactory);
-    }
+//    @Value("${spring.jpa.hibernate.dialect}")
+//    private String dialect;
+//
+//    @Autowired
+//    private DataSourceProvider provider;
+//
+//    @Bean
+//    public DataSource cdtDatasource() {
+//        return provider.dataSources.get(DatabaseName.CHI_DAO_TUYEN);
+//    }
+//
+//    @Bean
+//    public LocalContainerEntityManagerFactoryBean cdtEntityManagerFactory(@Qualifier("cdtDatasource") DataSource dataSource) {
+//        LocalContainerEntityManagerFactoryBean em
+//            = new LocalContainerEntityManagerFactoryBean();
+//        em.setDataSource(dataSource);
+//        em.setPackagesToScan(
+//            new String[] { "com.vnptit.vnpthis.domain.cdt" });
+//
+//        HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+//        em.setJpaVendorAdapter(vendorAdapter);
+//
+//        HashMap<String, Object> properties = new HashMap<>();
+//        properties.put("hibernate.dialect", dialect);
+//
+//        em.setJpaPropertyMap(properties);
+//        return em;
+//    }
+//
+//    @Bean
+//    public PlatformTransactionManager cdtTransactionManager(
+//        @Qualifier("cdtEntityManagerFactory") EntityManagerFactory entityManagerFactory) {
+//        return new JpaTransactionManager(entityManagerFactory);
+//    }
 }

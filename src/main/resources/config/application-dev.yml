@@ -45,7 +45,7 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    jdbc-url: jdbc:oracle:thin:@//10.145.21.100:1521/pdb_testl2
+    url: jdbc:oracle:thin:@//10.145.21.100:1521/pdb_testl2
     username: PM2_FRESHER
     password: fresher2020
     hikari:
