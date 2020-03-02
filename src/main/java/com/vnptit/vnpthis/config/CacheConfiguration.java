@@ -65,6 +65,24 @@ public class CacheConfiguration {
             createCache(cm, TienDo.class.getName());
             createCache(cm, TienDo.class.getName() + ".upFiles");
             createCache(cm, UpFile.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtTochucCap.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtTochucCap.class.getName() + ".dmChungchis");
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDmChungchi.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDmChungchi.class.getName() + ".chungChis");
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtChungChi.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDaotaoCt.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDaotaoCt.class.getName() + ".hocVienCts");
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtQlHocvienCt.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDmNguoidung.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDaotao.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDaotao.class.getName() + ".daoTaoCts");
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDaotao.class.getName() + ".hocViens");
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtQlHocvien.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDutoanDaotao.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDutoanDaotao.class.getName() + ".duToanDaotaoCts");
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDutoanDaotaoct.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDmNoidung.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.qldt.QldtDmNoidung.class.getName() + ".duToandaotaoCts");
             // jhipster-needle-ehcache-add-entry
         };
     }

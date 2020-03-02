@@ -1,0 +1,44 @@
+{
+    "name": "QldtChungChi",
+    "fields": [
+        {
+            "fieldName": "han",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ngaycap",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "ngayhethan",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "urlchungchi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "qldtDmChungchi",
+            "otherEntityRelationshipName": "chungChi",
+            "relationshipName": "qldtDmChungchi",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200302014000",
+    "entityTableName": "QLDT_CHUNGCHI",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

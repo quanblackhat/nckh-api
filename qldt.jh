@@ -1,0 +1,105 @@
+
+entity QldtTochucCap(TCC){
+    Matochuc String 
+    Tentochuc String
+    Noidung String
+    Sudung Integer
+}
+entity QldtDmChungchi(DMCC){
+    Machungchi String
+    Tenchungchi String
+    Mota String
+    Trangthai Integer
+    Sudung Integer
+}
+entity QldtChungChi(CC) {
+    Han Integer 
+    Ngaycap LocalDate
+    Ngayhethan LocalDate
+    Urlchungchi String 
+    Sudung Integer
+}
+entity QldtDaotaoCt(DTC){
+    Madaotaochitiet String 
+    Tendaotaochitiet String
+    NgayBd LocalDate 
+    NgayKt LocalDate
+    Thoigiandaotaoct Integer
+    Noidungdaotaoct String
+    Trangthaidaotaoct Integer
+    Sudung Integer
+}
+entity QldtQlHocvienCt(QLHVC){
+    Diemdanh Integer
+    Diemthi Integer 
+    Danhgia String 
+    Sudung Integer
+}
+entity QldtDmNguoidung(DMNGUOID){
+    Ten String 
+    Ngaysinh LocalDate
+    Mabenhvien String 
+    Sudung Integer
+}
+entity QldtDaotao(DT)  {
+    Madaotao String 
+    Tendaotao String
+    NgayBd LocalDate
+    NgayKt LocalDate
+    Diachi String
+    Doituongchitiet String
+    Noidungdaotao String
+    Thoigiandaotao Integer
+    Sudung Integer
+}
+entity QldtQlHocvien(QLHV)
+{
+    Diemdanh Integer
+    Diem Integer
+    Danhgia String 
+    Sudung Integer
+    Trangthaithanhtoan Integer
+    Ngaythanhtoan LocalDate
+    Mathanhtoan String
+}
+entity QldtDutoanDaotao(DTDT) {
+    Solop Integer
+    Sohocvien Integer
+    Dathanhtoan Integer
+    Madutoan Integer
+    Tendutoan String 
+    Trangthai Integer
+    NgayBd LocalDate
+    NgayKt LocalDate
+    Sudung Integer
+}
+entity QldtDutoanDaotaoct(DTDTC){
+    Soluong Integer
+    Mucchi Integer
+    Thanhtien Integer 
+    Noidung String 
+    Trangthaict Integer
+    Dathanhtoan Integer
+    Sudung Integer
+}
+entity QldtDmNoidung(DMNOID){
+    Noidung String
+    Sudung Integer
+}
+relationship OneToMany {
+       QldtDmChungchi{chungChi} to QldtChungChi
+       QldtDaotao{daoTaoCt} to QldtDaotaoCt
+       QldtDaotao{hocVien} to QldtQlHocvien
+       QldtDaotaoCt{hocVienCt} to QldtQlHocvienCt
+       QldtDutoanDaotao{duToanDaotaoCt} to QldtDutoanDaotaoct
+       QldtTochucCap{dmChungchi} to QldtDmChungchi
+        QldtDmNoidung{duToandaotaoCt} to QldtDutoanDaotaoct
+}
+relationship OneToOne {
+    QldtDmNguoidung{daoTaoCt} to QldtDaotaoCt
+      QldtDmNguoidung{hocVien} to QldtQlHocvien
+}
+dto all with mapstruct
+filter all
+paginate all with pagination
+service all with serviceImpl
