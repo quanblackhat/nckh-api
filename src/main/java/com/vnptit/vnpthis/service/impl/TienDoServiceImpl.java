@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.impl;
 
 import com.vnptit.vnpthis.service.TienDoService;
-import com.vnptit.vnpthis.domain.TienDo;
+import com.vnptit.vnpthis.domain.nckh.TienDo;
 import com.vnptit.vnpthis.repository.TienDoRepository;
 import com.vnptit.vnpthis.service.dto.TienDoDTO;
 import com.vnptit.vnpthis.service.mapper.TienDoMapper;

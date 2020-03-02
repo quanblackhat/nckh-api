@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.impl;
 
 import com.vnptit.vnpthis.service.DanhMucService;
-import com.vnptit.vnpthis.domain.DanhMuc;
+import com.vnptit.vnpthis.domain.nckh.DanhMuc;
 import com.vnptit.vnpthis.repository.DanhMucRepository;
 import com.vnptit.vnpthis.service.dto.DanhMucDTO;
 import com.vnptit.vnpthis.service.mapper.DanhMucMapper;

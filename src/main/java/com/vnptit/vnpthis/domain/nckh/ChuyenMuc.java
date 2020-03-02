@@ -1,4 +1,4 @@
-package com.vnptit.vnpthis.domain;
+package com.vnptit.vnpthis.domain.nckh;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 

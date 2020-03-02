@@ -1,4 +1,4 @@
-package com.vnptit.vnpthis.domain;
+package com.vnptit.vnpthis.domain.nckh;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -10,28 +10,32 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
- * A DanhGia.
+ * A UpFile.
  */
 @Entity
-@Table(name = "NCKH_DANHGIA")
+@Table(name = "NCKH_UPFILE")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-public class DanhGia implements Serializable {
+public class UpFile implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(name = "danhgiaid")
+    @Column(name = "fileid")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
     @NotNull
-    @Column(name = "diemdanhgia", nullable = false)
-    private Integer diemdanhgia;
+    @Column(name = "mota", nullable = false)
+    private String mota;
 
-    @NotNull
-    @Column(name = "ghichu", nullable = false)
-    private String ghichu;
+
+    @Lob
+    @Column(name = "noidung", nullable = false)
+    private byte[] noidung;
+
+//    @Column(name = "noidung_content_type", nullable = false)
+//    private String noidungContentType;
 
     @NotNull
     @Column(name = "ngay_cn", nullable = false)
@@ -43,8 +47,13 @@ public class DanhGia implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "detaiid", insertable = false, updatable = false)
-    @JsonIgnoreProperties("danhGias")
+    @JsonIgnoreProperties("upFiles")
     private DeTai deTai;
+
+    @ManyToOne
+    @JoinColumn(name = "tiendoid", insertable = false, updatable = false)
+    @JsonIgnoreProperties("upFiles")
+    private TienDo tienDo;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -55,37 +64,50 @@ public class DanhGia implements Serializable {
         this.id = id;
     }
 
-    public Integer getDiemdanhgia() {
-        return diemdanhgia;
+    public String getMota() {
+        return mota;
     }
 
-    public DanhGia diemdanhgia(Integer diemdanhgia) {
-        this.diemdanhgia = diemdanhgia;
+    public UpFile mota(String mota) {
+        this.mota = mota;
         return this;
     }
 
-    public void setDiemdanhgia(Integer diemdanhgia) {
-        this.diemdanhgia = diemdanhgia;
+    public void setMota(String mota) {
+        this.mota = mota;
     }
 
-    public String getGhichu() {
-        return ghichu;
+    public byte[] getNoidung() {
+        return noidung;
     }
 
-    public DanhGia ghichu(String ghichu) {
-        this.ghichu = ghichu;
+    public UpFile noidung(byte[] noidung) {
+        this.noidung = noidung;
         return this;
     }
 
-    public void setGhichu(String ghichu) {
-        this.ghichu = ghichu;
+    public void setNoidung(byte[] noidung) {
+        this.noidung = noidung;
     }
+
+//    public String getNoidungContentType() {
+//        return noidungContentType;
+//    }
+//
+//    public UpFile noidungContentType(String noidungContentType) {
+//        this.noidungContentType = noidungContentType;
+//        return this;
+//    }
+
+//    public void setNoidungContentType(String noidungContentType) {
+//        this.noidungContentType = noidungContentType;
+//    }
 
     public LocalDate getNgayCn() {
         return ngayCn;
     }
 
-    public DanhGia ngayCn(LocalDate ngayCn) {
+    public UpFile ngayCn(LocalDate ngayCn) {
         this.ngayCn = ngayCn;
         return this;
     }
@@ -98,7 +120,7 @@ public class DanhGia implements Serializable {
         return nguoiCn;
     }
 
-    public DanhGia nguoiCn(Integer nguoiCn) {
+    public UpFile nguoiCn(Integer nguoiCn) {
         this.nguoiCn = nguoiCn;
         return this;
     }
@@ -111,13 +133,26 @@ public class DanhGia implements Serializable {
         return deTai;
     }
 
-    public DanhGia deTai(DeTai deTai) {
+    public UpFile deTai(DeTai deTai) {
         this.deTai = deTai;
         return this;
     }
 
     public void setDeTai(DeTai deTai) {
         this.deTai = deTai;
+    }
+
+    public TienDo getTienDo() {
+        return tienDo;
+    }
+
+    public UpFile tienDo(TienDo tienDo) {
+        this.tienDo = tienDo;
+        return this;
+    }
+
+    public void setTienDo(TienDo tienDo) {
+        this.tienDo = tienDo;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
@@ -126,10 +161,10 @@ public class DanhGia implements Serializable {
         if (this == o) {
             return true;
         }
-        if (!(o instanceof DanhGia)) {
+        if (!(o instanceof UpFile)) {
             return false;
         }
-        return id != null && id.equals(((DanhGia) o).id);
+        return id != null && id.equals(((UpFile) o).id);
     }
 
     @Override
@@ -139,10 +174,11 @@ public class DanhGia implements Serializable {
 
     @Override
     public String toString() {
-        return "DanhGia{" +
+        return "UpFile{" +
             "id=" + getId() +
-            ", diemdanhgia=" + getDiemdanhgia() +
-            ", ghichu='" + getGhichu() + "'" +
+            ", mota='" + getMota() + "'" +
+            ", noidung='" + getNoidung() + "'" +
+//            ", noidungContentType='" + getNoidungContentType() + "'" +
             ", ngayCn='" + getNgayCn() + "'" +
             ", nguoiCn=" + getNguoiCn() +
             "}";

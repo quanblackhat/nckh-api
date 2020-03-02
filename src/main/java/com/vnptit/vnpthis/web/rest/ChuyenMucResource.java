@@ -1,5 +1,6 @@
 package com.vnptit.vnpthis.web.rest;
 
+import com.vnptit.vnpthis.domain.nckh.ChuyenMuc;
 import com.vnptit.vnpthis.service.ChuyenMucService;
 import com.vnptit.vnpthis.web.rest.errors.BadRequestAlertException;
 import com.vnptit.vnpthis.service.dto.ChuyenMucDTO;
@@ -28,7 +29,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * REST controller for managing {@link com.vnptit.vnpthis.domain.ChuyenMuc}.
+ * REST controller for managing {@link ChuyenMuc}.
  */
 @RestController
 @RequestMapping("/api")

@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.impl;
 
 import com.vnptit.vnpthis.service.UpFileService;
-import com.vnptit.vnpthis.domain.UpFile;
+import com.vnptit.vnpthis.domain.nckh.UpFile;
 import com.vnptit.vnpthis.repository.UpFileRepository;
 import com.vnptit.vnpthis.service.dto.UpFileDTO;
 import com.vnptit.vnpthis.service.mapper.UpFileMapper;

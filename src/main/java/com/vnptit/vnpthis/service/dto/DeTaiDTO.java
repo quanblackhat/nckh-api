@@ -1,11 +1,13 @@
 package com.vnptit.vnpthis.service.dto;
+import com.vnptit.vnpthis.domain.nckh.DeTai;
+
 import java.time.LocalDate;
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.vnptit.vnpthis.domain.DeTai} entity.
+ * A DTO for the {@link DeTai} entity.
  */
 public class DeTaiDTO implements Serializable {
 

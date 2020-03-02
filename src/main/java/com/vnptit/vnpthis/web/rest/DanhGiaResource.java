@@ -1,5 +1,6 @@
 package com.vnptit.vnpthis.web.rest;
 
+import com.vnptit.vnpthis.domain.nckh.DanhGia;
 import com.vnptit.vnpthis.service.DanhGiaService;
 import com.vnptit.vnpthis.web.rest.errors.BadRequestAlertException;
 import com.vnptit.vnpthis.service.dto.DanhGiaDTO;
@@ -28,7 +29,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * REST controller for managing {@link com.vnptit.vnpthis.domain.DanhGia}.
+ * REST controller for managing {@link DanhGia}.
  */
 @RestController
 @RequestMapping("/api")

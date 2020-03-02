@@ -1,11 +1,13 @@
 package com.vnptit.vnpthis.service.dto;
+import com.vnptit.vnpthis.domain.nckh.DanhGia;
+
 import java.time.LocalDate;
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.vnptit.vnpthis.domain.DanhGia} entity.
+ * A DTO for the {@link DanhGia} entity.
  */
 public class DanhGiaDTO implements Serializable {
 

@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.impl;
 
 import com.vnptit.vnpthis.service.ChuyenMucService;
-import com.vnptit.vnpthis.domain.ChuyenMuc;
+import com.vnptit.vnpthis.domain.nckh.ChuyenMuc;
 import com.vnptit.vnpthis.repository.ChuyenMucRepository;
 import com.vnptit.vnpthis.service.dto.ChuyenMucDTO;
 import com.vnptit.vnpthis.service.mapper.ChuyenMucMapper;

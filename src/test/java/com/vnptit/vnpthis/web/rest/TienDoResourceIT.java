@@ -1,9 +1,9 @@
 package com.vnptit.vnpthis.web.rest;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
-import com.vnptit.vnpthis.domain.TienDo;
-import com.vnptit.vnpthis.domain.UpFile;
-import com.vnptit.vnpthis.domain.DeTai;
+import com.vnptit.vnpthis.domain.nckh.TienDo;
+import com.vnptit.vnpthis.domain.nckh.UpFile;
+import com.vnptit.vnpthis.domain.nckh.DeTai;
 import com.vnptit.vnpthis.repository.TienDoRepository;
 import com.vnptit.vnpthis.service.TienDoService;
 import com.vnptit.vnpthis.service.dto.TienDoDTO;
@@ -269,7 +269,7 @@ public class TienDoResourceIT {
             .andExpect(jsonPath("$.[*].ngayCn").value(hasItem(DEFAULT_NGAY_CN.toString())))
             .andExpect(jsonPath("$.[*].nguoiCn").value(hasItem(DEFAULT_NGUOI_CN)));
     }
-    
+
     @Test
     @Transactional
     public void getTienDo() throws Exception {

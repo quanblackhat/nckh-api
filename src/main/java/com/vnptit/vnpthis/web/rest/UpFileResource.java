@@ -1,5 +1,6 @@
 package com.vnptit.vnpthis.web.rest;
 
+import com.vnptit.vnpthis.domain.nckh.UpFile;
 import com.vnptit.vnpthis.service.UpFileService;
 import com.vnptit.vnpthis.web.rest.errors.BadRequestAlertException;
 import com.vnptit.vnpthis.service.dto.UpFileDTO;
@@ -28,7 +29,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * REST controller for managing {@link com.vnptit.vnpthis.domain.UpFile}.
+ * REST controller for managing {@link UpFile}.
  */
 @RestController
 @RequestMapping("/api")

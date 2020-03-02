@@ -1,8 +1,8 @@
 package com.vnptit.vnpthis.web.rest;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
-import com.vnptit.vnpthis.domain.DanhGia;
-import com.vnptit.vnpthis.domain.DeTai;
+import com.vnptit.vnpthis.domain.nckh.DanhGia;
+import com.vnptit.vnpthis.domain.nckh.DeTai;
 import com.vnptit.vnpthis.repository.DanhGiaRepository;
 import com.vnptit.vnpthis.service.DanhGiaService;
 import com.vnptit.vnpthis.service.dto.DanhGiaDTO;
@@ -268,7 +268,7 @@ public class DanhGiaResourceIT {
             .andExpect(jsonPath("$.[*].ngayCn").value(hasItem(DEFAULT_NGAY_CN.toString())))
             .andExpect(jsonPath("$.[*].nguoiCn").value(hasItem(DEFAULT_NGUOI_CN)));
     }
-    
+
     @Test
     @Transactional
     public void getDanhGia() throws Exception {

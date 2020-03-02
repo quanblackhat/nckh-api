@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.repository;
 
-import com.vnptit.vnpthis.domain.DuToan;
+import com.vnptit.vnpthis.domain.nckh.DuToan;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

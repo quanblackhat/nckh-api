@@ -1,8 +1,8 @@
 package com.vnptit.vnpthis.web.rest;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
-import com.vnptit.vnpthis.domain.ChuyenMuc;
-import com.vnptit.vnpthis.domain.DeTai;
+import com.vnptit.vnpthis.domain.nckh.ChuyenMuc;
+import com.vnptit.vnpthis.domain.nckh.DeTai;
 import com.vnptit.vnpthis.repository.ChuyenMucRepository;
 import com.vnptit.vnpthis.service.ChuyenMucService;
 import com.vnptit.vnpthis.service.dto.ChuyenMucDTO;
@@ -241,7 +241,7 @@ public class ChuyenMucResourceIT {
             .andExpect(jsonPath("$.[*].sott").value(hasItem(DEFAULT_SOTT)))
             .andExpect(jsonPath("$.[*].tenchuyenmuc").value(hasItem(DEFAULT_TENCHUYENMUC)));
     }
-    
+
     @Test
     @Transactional
     public void getChuyenMuc() throws Exception {

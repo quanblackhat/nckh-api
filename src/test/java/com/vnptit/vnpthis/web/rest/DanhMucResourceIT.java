@@ -1,8 +1,8 @@
 package com.vnptit.vnpthis.web.rest;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
-import com.vnptit.vnpthis.domain.DanhMuc;
-import com.vnptit.vnpthis.domain.LoaiDanhMuc;
+import com.vnptit.vnpthis.domain.nckh.DanhMuc;
+import com.vnptit.vnpthis.domain.nckh.LoaiDanhMuc;
 import com.vnptit.vnpthis.repository.DanhMucRepository;
 import com.vnptit.vnpthis.service.DanhMucService;
 import com.vnptit.vnpthis.service.dto.DanhMucDTO;
@@ -294,7 +294,7 @@ public class DanhMucResourceIT {
             .andExpect(jsonPath("$.[*].ten").value(hasItem(DEFAULT_TEN)))
             .andExpect(jsonPath("$.[*].thutu").value(hasItem(DEFAULT_THUTU)));
     }
-    
+
     @Test
     @Transactional
     public void getDanhMuc() throws Exception {

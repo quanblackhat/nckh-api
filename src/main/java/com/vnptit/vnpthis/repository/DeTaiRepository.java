@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.repository;
 
-import com.vnptit.vnpthis.domain.DeTai;
+import com.vnptit.vnpthis.domain.nckh.DeTai;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

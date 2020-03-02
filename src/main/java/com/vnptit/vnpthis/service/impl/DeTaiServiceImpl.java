@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.impl;
 
 import com.vnptit.vnpthis.service.DeTaiService;
-import com.vnptit.vnpthis.domain.DeTai;
+import com.vnptit.vnpthis.domain.nckh.DeTai;
 import com.vnptit.vnpthis.repository.DeTaiRepository;
 import com.vnptit.vnpthis.service.dto.DeTaiDTO;
 import com.vnptit.vnpthis.service.mapper.DeTaiMapper;

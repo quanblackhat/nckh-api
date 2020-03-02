@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.impl;
 
 import com.vnptit.vnpthis.service.DuToanService;
-import com.vnptit.vnpthis.domain.DuToan;
+import com.vnptit.vnpthis.domain.nckh.DuToan;
 import com.vnptit.vnpthis.repository.DuToanRepository;
 import com.vnptit.vnpthis.service.dto.DuToanDTO;
 import com.vnptit.vnpthis.service.mapper.DuToanMapper;

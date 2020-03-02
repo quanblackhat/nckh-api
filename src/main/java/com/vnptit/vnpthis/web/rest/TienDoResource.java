@@ -1,5 +1,6 @@
 package com.vnptit.vnpthis.web.rest;
 
+import com.vnptit.vnpthis.domain.nckh.TienDo;
 import com.vnptit.vnpthis.service.TienDoService;
 import com.vnptit.vnpthis.web.rest.errors.BadRequestAlertException;
 import com.vnptit.vnpthis.service.dto.TienDoDTO;
@@ -28,7 +29,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * REST controller for managing {@link com.vnptit.vnpthis.domain.TienDo}.
+ * REST controller for managing {@link TienDo}.
  */
 @RestController
 @RequestMapping("/api")

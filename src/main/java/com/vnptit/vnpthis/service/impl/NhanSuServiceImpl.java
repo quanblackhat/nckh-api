@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.impl;
 
 import com.vnptit.vnpthis.service.NhanSuService;
-import com.vnptit.vnpthis.domain.NhanSu;
+import com.vnptit.vnpthis.domain.nckh.NhanSu;
 import com.vnptit.vnpthis.repository.NhanSuRepository;
 import com.vnptit.vnpthis.service.dto.NhanSuDTO;
 import com.vnptit.vnpthis.service.mapper.NhanSuMapper;

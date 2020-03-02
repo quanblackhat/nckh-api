@@ -1,7 +1,7 @@
 package com.vnptit.vnpthis.service.impl;
 
 import com.vnptit.vnpthis.service.DanhGiaService;
-import com.vnptit.vnpthis.domain.DanhGia;
+import com.vnptit.vnpthis.domain.nckh.DanhGia;
 import com.vnptit.vnpthis.repository.DanhGiaRepository;
 import com.vnptit.vnpthis.service.dto.DanhGiaDTO;
 import com.vnptit.vnpthis.service.mapper.DanhGiaMapper;

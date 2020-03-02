@@ -2,6 +2,8 @@ package com.vnptit.vnpthis.service.dto;
 
 import java.io.Serializable;
 import java.util.Objects;
+
+import com.vnptit.vnpthis.domain.nckh.LoaiDanhMuc;
 import io.github.jhipster.service.Criteria;
 import io.github.jhipster.service.filter.BooleanFilter;
 import io.github.jhipster.service.filter.DoubleFilter;
@@ -12,7 +14,7 @@ import io.github.jhipster.service.filter.LongFilter;
 import io.github.jhipster.service.filter.StringFilter;
 
 /**
- * Criteria class for the {@link com.vnptit.vnpthis.domain.LoaiDanhMuc} entity. This class is used
+ * Criteria class for the {@link LoaiDanhMuc} entity. This class is used
  * in {@link com.vnptit.vnpthis.web.rest.LoaiDanhMucResource} to receive all the possible filtering options from
  * the Http GET request parameters.
  * For example the following could be a valid request:

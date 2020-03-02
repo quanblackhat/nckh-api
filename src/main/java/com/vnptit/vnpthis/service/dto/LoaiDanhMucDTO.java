@@ -1,10 +1,12 @@
 package com.vnptit.vnpthis.service.dto;
+import com.vnptit.vnpthis.domain.nckh.LoaiDanhMuc;
+
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.vnptit.vnpthis.domain.LoaiDanhMuc} entity.
+ * A DTO for the {@link LoaiDanhMuc} entity.
  */
 public class LoaiDanhMucDTO implements Serializable {
 

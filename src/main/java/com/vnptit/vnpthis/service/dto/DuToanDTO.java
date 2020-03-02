@@ -1,11 +1,13 @@
 package com.vnptit.vnpthis.service.dto;
+import com.vnptit.vnpthis.domain.nckh.DuToan;
+
 import java.time.LocalDate;
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.vnptit.vnpthis.domain.DuToan} entity.
+ * A DTO for the {@link DuToan} entity.
  */
 public class DuToanDTO implements Serializable {
 

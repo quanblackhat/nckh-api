@@ -1,6 +1,6 @@
 package com.vnptit.vnpthis.service.mapper;
 
-import com.vnptit.vnpthis.domain.*;
+import com.vnptit.vnpthis.domain.nckh.ChuyenMuc;
 import com.vnptit.vnpthis.service.dto.ChuyenMucDTO;
 
 import org.mapstruct.*;

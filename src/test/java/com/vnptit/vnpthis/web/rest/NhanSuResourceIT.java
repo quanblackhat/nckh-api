@@ -1,8 +1,8 @@
 package com.vnptit.vnpthis.web.rest;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
-import com.vnptit.vnpthis.domain.NhanSu;
-import com.vnptit.vnpthis.domain.DeTai;
+import com.vnptit.vnpthis.domain.nckh.NhanSu;
+import com.vnptit.vnpthis.domain.nckh.DeTai;
 import com.vnptit.vnpthis.repository.NhanSuRepository;
 import com.vnptit.vnpthis.service.NhanSuService;
 import com.vnptit.vnpthis.service.dto.NhanSuDTO;
@@ -242,7 +242,7 @@ public class NhanSuResourceIT {
             .andExpect(jsonPath("$.[*].ngayCn").value(hasItem(DEFAULT_NGAY_CN.toString())))
             .andExpect(jsonPath("$.[*].nguoiCn").value(hasItem(DEFAULT_NGUOI_CN)));
     }
-    
+
     @Test
     @Transactional
     public void getNhanSu() throws Exception {

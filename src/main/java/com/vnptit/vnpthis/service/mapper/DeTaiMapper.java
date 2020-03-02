@@ -1,6 +1,7 @@
 package com.vnptit.vnpthis.service.mapper;
 
 import com.vnptit.vnpthis.domain.*;
+import com.vnptit.vnpthis.domain.nckh.DeTai;
 import com.vnptit.vnpthis.service.dto.DeTaiDTO;
 
 import org.mapstruct.*;

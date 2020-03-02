@@ -1,4 +1,6 @@
 package com.vnptit.vnpthis.service.dto;
+import com.vnptit.vnpthis.domain.nckh.UpFile;
+
 import java.time.LocalDate;
 import javax.validation.constraints.*;
 import java.io.Serializable;
@@ -6,7 +8,7 @@ import java.util.Objects;
 import javax.persistence.Lob;
 
 /**
- * A DTO for the {@link com.vnptit.vnpthis.domain.UpFile} entity.
+ * A DTO for the {@link UpFile} entity.
  */
 public class UpFileDTO implements Serializable {
 
@@ -15,7 +17,7 @@ public class UpFileDTO implements Serializable {
     @NotNull
     private String mota;
 
-    
+
     @Lob
     private byte[] noidung;
 

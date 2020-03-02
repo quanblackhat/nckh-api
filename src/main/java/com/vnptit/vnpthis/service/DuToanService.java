@@ -1,5 +1,6 @@
 package com.vnptit.vnpthis.service;
 
+import com.vnptit.vnpthis.domain.nckh.DuToan;
 import com.vnptit.vnpthis.service.dto.DuToanDTO;
 
 import org.springframework.data.domain.Page;
@@ -8,7 +9,7 @@ import org.springframework.data.domain.Pageable;
 import java.util.Optional;
 
 /**
- * Service Interface for managing {@link com.vnptit.vnpthis.domain.DuToan}.
+ * Service Interface for managing {@link DuToan}.
  */
 public interface DuToanService {
 

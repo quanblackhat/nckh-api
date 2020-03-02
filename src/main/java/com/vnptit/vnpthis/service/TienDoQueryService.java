@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import io.github.jhipster.service.QueryService;
 
-import com.vnptit.vnpthis.domain.TienDo;
+import com.vnptit.vnpthis.domain.nckh.TienDo;
 import com.vnptit.vnpthis.domain.*; // for static metamodels
 import com.vnptit.vnpthis.repository.TienDoRepository;
 import com.vnptit.vnpthis.service.dto.TienDoCriteria;

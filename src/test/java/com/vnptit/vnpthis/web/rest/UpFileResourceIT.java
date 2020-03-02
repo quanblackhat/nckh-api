@@ -1,15 +1,14 @@
 package com.vnptit.vnpthis.web.rest;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
-import com.vnptit.vnpthis.domain.UpFile;
-import com.vnptit.vnpthis.domain.DeTai;
-import com.vnptit.vnpthis.domain.TienDo;
+import com.vnptit.vnpthis.domain.nckh.UpFile;
+import com.vnptit.vnpthis.domain.nckh.DeTai;
+import com.vnptit.vnpthis.domain.nckh.TienDo;
 import com.vnptit.vnpthis.repository.UpFileRepository;
 import com.vnptit.vnpthis.service.UpFileService;
 import com.vnptit.vnpthis.service.dto.UpFileDTO;
 import com.vnptit.vnpthis.service.mapper.UpFileMapper;
 import com.vnptit.vnpthis.web.rest.errors.ExceptionTranslator;
-import com.vnptit.vnpthis.service.dto.UpFileCriteria;
 import com.vnptit.vnpthis.service.UpFileQueryService;
 
 import org.junit.jupiter.api.BeforeEach;

@@ -1,8 +1,8 @@
 package com.vnptit.vnpthis.web.rest;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
-import com.vnptit.vnpthis.domain.DuToan;
-import com.vnptit.vnpthis.domain.DeTai;
+import com.vnptit.vnpthis.domain.nckh.DuToan;
+import com.vnptit.vnpthis.domain.nckh.DeTai;
 import com.vnptit.vnpthis.repository.DuToanRepository;
 import com.vnptit.vnpthis.service.DuToanService;
 import com.vnptit.vnpthis.service.dto.DuToanDTO;
@@ -295,7 +295,7 @@ public class DuToanResourceIT {
             .andExpect(jsonPath("$.[*].ngayCn").value(hasItem(DEFAULT_NGAY_CN.toString())))
             .andExpect(jsonPath("$.[*].nguoiCn").value(hasItem(DEFAULT_NGUOI_CN)));
     }
-    
+
     @Test
     @Transactional
     public void getDuToan() throws Exception {

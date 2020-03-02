@@ -1,5 +1,6 @@
 package com.vnptit.vnpthis.domain;
 
+import com.vnptit.vnpthis.domain.nckh.UpFile;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import com.vnptit.vnpthis.web.rest.TestUtil;

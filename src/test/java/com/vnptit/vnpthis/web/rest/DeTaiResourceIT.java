@@ -1,13 +1,13 @@
 package com.vnptit.vnpthis.web.rest;
 
 import com.vnptit.vnpthis.VnptHisBackendApp;
-import com.vnptit.vnpthis.domain.DeTai;
-import com.vnptit.vnpthis.domain.UpFile;
-import com.vnptit.vnpthis.domain.TienDo;
-import com.vnptit.vnpthis.domain.NhanSu;
-import com.vnptit.vnpthis.domain.DuToan;
-import com.vnptit.vnpthis.domain.DanhGia;
-import com.vnptit.vnpthis.domain.ChuyenMuc;
+import com.vnptit.vnpthis.domain.nckh.DeTai;
+import com.vnptit.vnpthis.domain.nckh.UpFile;
+import com.vnptit.vnpthis.domain.nckh.TienDo;
+import com.vnptit.vnpthis.domain.nckh.NhanSu;
+import com.vnptit.vnpthis.domain.nckh.DuToan;
+import com.vnptit.vnpthis.domain.nckh.DanhGia;
+import com.vnptit.vnpthis.domain.nckh.ChuyenMuc;
 import com.vnptit.vnpthis.repository.DeTaiRepository;
 import com.vnptit.vnpthis.service.DeTaiService;
 import com.vnptit.vnpthis.service.dto.DeTaiDTO;
@@ -728,7 +728,7 @@ public class DeTaiResourceIT {
             .andExpect(jsonPath("$.[*].nguoiCn").value(hasItem(DEFAULT_NGUOI_CN)))
             .andExpect(jsonPath("$.[*].ngayCn").value(hasItem(DEFAULT_NGAY_CN.toString())));
     }
-    
+
     @Test
     @Transactional
     public void getDeTai() throws Exception {
