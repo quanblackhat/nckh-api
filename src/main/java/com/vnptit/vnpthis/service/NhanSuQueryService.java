@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import io.github.jhipster.service.QueryService;
 
 import com.vnptit.vnpthis.domain.nckh.NhanSu;
-import com.vnptit.vnpthis.domain.*; // for static metamodels
+import com.vnptit.vnpthis.domain.nckh.*; // for static metamodels
 import com.vnptit.vnpthis.repository.NhanSuRepository;
 import com.vnptit.vnpthis.service.dto.NhanSuCriteria;
 import com.vnptit.vnpthis.service.dto.NhanSuDTO;

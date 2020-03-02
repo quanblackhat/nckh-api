@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import io.github.jhipster.service.QueryService;
 
 import com.vnptit.vnpthis.domain.nckh.ChuyenMuc;
-import com.vnptit.vnpthis.domain.*; // for static metamodels
+import com.vnptit.vnpthis.domain.nckh.*;
 import com.vnptit.vnpthis.repository.ChuyenMucRepository;
 import com.vnptit.vnpthis.service.dto.ChuyenMucCriteria;
 import com.vnptit.vnpthis.service.dto.ChuyenMucDTO;

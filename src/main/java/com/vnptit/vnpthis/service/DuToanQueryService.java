@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import io.github.jhipster.service.QueryService;
 
 import com.vnptit.vnpthis.domain.nckh.DuToan;
-import com.vnptit.vnpthis.domain.*; // for static metamodels
+import com.vnptit.vnpthis.domain.nckh.*; // for static metamodels
 import com.vnptit.vnpthis.repository.DuToanRepository;
 import com.vnptit.vnpthis.service.dto.DuToanCriteria;
 import com.vnptit.vnpthis.service.dto.DuToanDTO;
