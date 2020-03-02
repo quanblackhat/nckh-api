@@ -1,0 +1,115 @@
+
+entity ChuyenMuc {
+	Ngaytao LocalDate required
+    Sott Integer required
+    Tenchuyenmuc String required
+}
+
+entity DanhGia {
+	Diemdanhgia Integer required
+    Ghichu String required
+    NgayCn LocalDate required
+    NguoiCn Integer required
+}
+
+entity DanhMuc {
+	Ma String required
+    Ngaytao LocalDate required
+    Sudung Integer required
+    Ten String required
+    Thutu Integer required
+}
+entity DeTai {
+	Sott Integer required
+    Tendetai String required
+    Ngaytao LocalDate required
+    Ngaypheduyet LocalDate required
+    Ngaybd LocalDate required
+    Ngaykt LocalDate required
+    Hientrang Integer required
+    Xuatban Integer required
+    Capquanly Integer required
+    Ngaynghiemthu LocalDate required
+    Kinhphithuchien Integer required
+    Nguonkinhphi String required
+    Muctieu String required
+    KinhphiDukien Integer required
+    Chunhiemdetai Integer required
+    Noidungtongquan String required
+    KinhphiHoanthanh Integer required
+    Tongdiem Integer required
+    Ghichu String required
+    NguoiCn Integer required
+    NgayCn LocalDate required
+}
+
+entity DuToan {
+	TienDukien Integer required
+    TienHoanthanh Integer required
+    Ghichu String required
+    NgayCn LocalDate required
+    NguoiCn Integer required
+}
+
+entity LoaiDanhMuc {
+	Ten String required
+    Sudung Integer required
+}
+
+entity NhanSu {
+	Chunhiemdetai Integer required
+    NgayCn LocalDate required
+    NguoiCn Integer required
+}
+
+entity TienDo {
+	TyleHoanthanh Integer required
+    Mota String required
+    NgayCn LocalDate required
+    NguoiCn Integer required
+}
+
+entity UpFile {
+	Mota String required
+    Noidung Blob required
+    NgayCn LocalDate required
+    NguoiCn Integer required
+}
+relationship OneToMany {
+	DeTai{upFile} to UpFile
+}
+
+relationship OneToMany {
+	TienDo{upFile} to UpFile
+}
+
+relationship OneToMany {
+	DeTai{tienDo} to TienDo
+}
+
+relationship OneToMany {
+	DeTai{nhanSu} to NhanSu
+}
+
+relationship OneToMany {
+	 DeTai{duToan} to DuToan
+}
+
+relationship OneToMany {
+	DeTai{danhGia} to DanhGia
+}
+
+relationship OneToMany {
+	LoaiDanhMuc{danhMuc} to DanhMuc
+}
+relationship OneToMany {
+	 ChuyenMuc{deTai} to DeTai
+}
+
+service all with serviceImpl
+dto all with mapstruct
+filter all 
+paginate all with pagination
+
+
+

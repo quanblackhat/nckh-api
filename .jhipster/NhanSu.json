@@ -1,0 +1,45 @@
+{
+    "name": "NhanSu",
+    "fields": [
+        {
+            "fieldName": "chunhiemdetai",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ngayCn",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nguoiCn",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "deTai",
+            "otherEntityRelationshipName": "nhanSu",
+            "relationshipName": "deTai",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200302015845",
+    "entityTableName": "nhan_su",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

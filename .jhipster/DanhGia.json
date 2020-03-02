@@ -1,0 +1,52 @@
+{
+    "name": "DanhGia",
+    "fields": [
+        {
+            "fieldName": "diemdanhgia",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ghichu",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ngayCn",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nguoiCn",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "deTai",
+            "otherEntityRelationshipName": "danhGia",
+            "relationshipName": "deTai",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200302015840",
+    "entityTableName": "danh_gia",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

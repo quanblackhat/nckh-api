@@ -1,0 +1,58 @@
+{
+    "name": "TienDo",
+    "fields": [
+        {
+            "fieldName": "tyleHoanthanh",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "mota",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ngayCn",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nguoiCn",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "upFile",
+            "otherEntityRelationshipName": "tienDo",
+            "relationshipName": "upFile"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "deTai",
+            "otherEntityRelationshipName": "tienDo",
+            "relationshipName": "deTai",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200302015846",
+    "entityTableName": "tien_do",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

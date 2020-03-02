@@ -1,0 +1,201 @@
+{
+    "name": "DeTai",
+    "fields": [
+        {
+            "fieldName": "sott",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tendetai",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ngaytao",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ngaypheduyet",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ngaybd",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ngaykt",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "hientrang",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "xuatban",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "capquanly",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ngaynghiemthu",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "kinhphithuchien",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nguonkinhphi",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "muctieu",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "kinhphiDukien",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "chunhiemdetai",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "noidungtongquan",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "kinhphiHoanthanh",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tongdiem",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ghichu",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nguoiCn",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ngayCn",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "upFile",
+            "otherEntityRelationshipName": "deTai",
+            "relationshipName": "upFile"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "tienDo",
+            "otherEntityRelationshipName": "deTai",
+            "relationshipName": "tienDo"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "nhanSu",
+            "otherEntityRelationshipName": "deTai",
+            "relationshipName": "nhanSu"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "duToan",
+            "otherEntityRelationshipName": "deTai",
+            "relationshipName": "duToan"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "danhGia",
+            "otherEntityRelationshipName": "deTai",
+            "relationshipName": "danhGia"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "chuyenMuc",
+            "otherEntityRelationshipName": "deTai",
+            "relationshipName": "chuyenMuc",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200302015842",
+    "entityTableName": "de_tai",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

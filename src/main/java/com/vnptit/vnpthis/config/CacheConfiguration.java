@@ -47,6 +47,23 @@ public class CacheConfiguration {
             createCache(cm, Authority.class.getName());
             createCache(cm, User.class.getName() + ".authorities");
             createCache(cm, DataSourceConfig.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.ChuyenMuc.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.ChuyenMuc.class.getName() + ".deTais");
+            createCache(cm, com.vnptit.vnpthis.domain.DanhGia.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.DanhMuc.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.DeTai.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.DeTai.class.getName() + ".upFiles");
+            createCache(cm, com.vnptit.vnpthis.domain.DeTai.class.getName() + ".tienDos");
+            createCache(cm, com.vnptit.vnpthis.domain.DeTai.class.getName() + ".nhanSus");
+            createCache(cm, com.vnptit.vnpthis.domain.DeTai.class.getName() + ".duToans");
+            createCache(cm, com.vnptit.vnpthis.domain.DeTai.class.getName() + ".danhGias");
+            createCache(cm, com.vnptit.vnpthis.domain.DuToan.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.LoaiDanhMuc.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.LoaiDanhMuc.class.getName() + ".danhMucs");
+            createCache(cm, com.vnptit.vnpthis.domain.NhanSu.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.TienDo.class.getName());
+            createCache(cm, com.vnptit.vnpthis.domain.TienDo.class.getName() + ".upFiles");
+            createCache(cm, com.vnptit.vnpthis.domain.UpFile.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

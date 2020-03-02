@@ -1,0 +1,44 @@
+{
+    "name": "ChuyenMuc",
+    "fields": [
+        {
+            "fieldName": "ngaytao",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "sott",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "tenchuyenmuc",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "deTai",
+            "otherEntityRelationshipName": "chuyenMuc",
+            "relationshipName": "deTai"
+        }
+    ],
+    "changelogDate": "20200302015839",
+    "entityTableName": "chuyen_muc",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
