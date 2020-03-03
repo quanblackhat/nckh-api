@@ -336,6 +336,30 @@
             <artifactId>metrics-core</artifactId>
         </dependency>
         <!-- jhipster-needle-maven-add-dependency -->
+
+
+        <!--for resource server-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-resource-server</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-core</artifactId>
+            <version>5.2.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-jose</artifactId>
+            <version>5.2.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

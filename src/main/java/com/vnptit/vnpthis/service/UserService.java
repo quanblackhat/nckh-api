@@ -9,6 +9,7 @@ import com.vnptit.vnpthis.repository.jhipster.AuthorityRepository;
 import com.vnptit.vnpthis.repository.jhipster.UserRepository;
 import com.vnptit.vnpthis.security.AuthoritiesConstants;
 import com.vnptit.vnpthis.security.SecurityUtils;
+import com.vnptit.vnpthis.service.dto.AdmUserDTO;
 import com.vnptit.vnpthis.service.dto.UserDTO;
 
 import io.github.jhipster.security.RandomUtil;
@@ -20,7 +21,10 @@ import org.springframework.cache.CacheManager;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,7 +32,6 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.stream.Collectors;
-
 /**
  * Service class for managing users.
  */
@@ -314,5 +317,19 @@ public class UserService {
         if (user.getEmail() != null) {
             Objects.requireNonNull(cacheManager.getCache(UserRepository.USERS_BY_EMAIL_CACHE)).evict(user.getEmail());
         }
+    }
+
+    public AdmUserDTO getCurrentUser(AbstractAuthenticationToken authToken) {
+        Map<String, Object> attributes;
+        if (authToken instanceof OAuth2AuthenticationToken) {
+            attributes = ((OAuth2AuthenticationToken) authToken).getPrincipal().getAttributes();
+        } else if (authToken instanceof JwtAuthenticationToken) {
+            attributes = ((JwtAuthenticationToken) authToken).getTokenAttributes();
+        } else {
+            throw new IllegalArgumentException("AuthenticationToken is not OAuth2 or JWT!");
+        }
+        AdmUserDTO user = new AdmUserDTO();
+        user.setUserName(attributes.get("sub").toString());
+        return user;
     }
 }

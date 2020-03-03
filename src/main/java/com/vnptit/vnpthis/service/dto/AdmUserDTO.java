@@ -23,6 +23,10 @@ public class AdmUserDTO {
     private String createdBy = "system";
     private List<String> authorities = asList(AuthoritiesConstants.USER, AuthoritiesConstants.ADMIN);
 
+
+    public AdmUserDTO() {
+    }
+
     public String getLogin() {
         return login;
     }
