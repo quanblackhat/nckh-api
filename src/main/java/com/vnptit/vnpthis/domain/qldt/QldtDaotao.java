@@ -23,7 +23,7 @@ public class QldtDaotao implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
-    @Column(name = "DAOTAOID")
+    @Column(name = "daotaoid")
     private Long id;
 
     @Column(name = "madaotao")

@@ -20,6 +20,7 @@ public class QldtDmNoidung implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Column(name = "noidungid")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;

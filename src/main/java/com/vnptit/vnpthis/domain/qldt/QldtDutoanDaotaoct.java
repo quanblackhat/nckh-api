@@ -19,10 +19,20 @@ public class QldtDutoanDaotaoct implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Column(name = "dutoandtctid")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "dutoandtid", insertable = false, updatable = false)
+    @JsonIgnoreProperties("duToanDaotaoCts")
+    private QldtDutoanDaotao qldtDutoanDaotao;
+    
+    @ManyToOne
+    @JoinColumn(name = "noidungid", insertable = false, updatable = false)
+    @JsonIgnoreProperties("duToandaotaoCts")
+    private QldtDmNoidung qldtDmNoidung;
     @Column(name = "soluong")
     private Integer soluong;
 
@@ -44,15 +54,10 @@ public class QldtDutoanDaotaoct implements Serializable {
     @Column(name = "sudung")
     private Integer sudung;
 
-    @ManyToOne
-    @JsonIgnoreProperties("duToanDaotaoCts")
-    private QldtDutoanDaotao qldtDutoanDaotao;
+  
 
-    @ManyToOne
-    @JsonIgnoreProperties("duToandaotaoCts")
-    private QldtDmNoidung qldtDmNoidung;
-
-    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not
+    // remove
     public Long getId() {
         return id;
     }
@@ -177,7 +182,8 @@ public class QldtDutoanDaotaoct implements Serializable {
     public void setQldtDmNoidung(QldtDmNoidung qldtDmNoidung) {
         this.qldtDmNoidung = qldtDmNoidung;
     }
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and
+    // setters here, do not remove
 
     @Override
     public boolean equals(Object o) {
@@ -197,15 +203,8 @@ public class QldtDutoanDaotaoct implements Serializable {
 
     @Override
     public String toString() {
-        return "QldtDutoanDaotaoct{" +
-            "id=" + getId() +
-            ", soluong=" + getSoluong() +
-            ", mucchi=" + getMucchi() +
-            ", thanhtien=" + getThanhtien() +
-            ", noidung='" + getNoidung() + "'" +
-            ", trangthaict=" + getTrangthaict() +
-            ", dathanhtoan=" + getDathanhtoan() +
-            ", sudung=" + getSudung() +
-            "}";
+        return "QldtDutoanDaotaoct{" + "id=" + getId() + ", soluong=" + getSoluong() + ", mucchi=" + getMucchi()
+                + ", thanhtien=" + getThanhtien() + ", noidung='" + getNoidung() + "'" + ", trangthaict="
+                + getTrangthaict() + ", dathanhtoan=" + getDathanhtoan() + ", sudung=" + getSudung() + "}";
     }
 }

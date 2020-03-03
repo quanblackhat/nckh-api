@@ -5,6 +5,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -20,26 +21,33 @@ public class QldtChungChi implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Column(name = "idchungchi")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "han")
+    @NotNull
+    @Column(name = "han", nullable = false)
     private Integer han;
-
-    @Column(name = "ngaycap")
+    
+    @NotNull
+    @Column(name = "ngaycap", nullable = false)
     private LocalDate ngaycap;
-
-    @Column(name = "ngayhethan")
+    
+    @NotNull
+    @Column(name = "ngayhethan", nullable = false)
     private LocalDate ngayhethan;
 
-    @Column(name = "urlchungchi")
+    @NotNull
+    @Column(name = "urlchungchi", nullable = false)
     private String urlchungchi;
 
-    @Column(name = "sudung")
+    @NotNull
+    @Column(name = "sudung", nullable = false)
     private Integer sudung;
 
     @ManyToOne
+    @JoinColumn(name = "idchungchi", insertable = false, updatable = false)
     @JsonIgnoreProperties("chungChis")
     private QldtDmChungchi qldtDmChungchi;
 

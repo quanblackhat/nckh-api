@@ -18,24 +18,6 @@
             "fieldType": "Integer"
         }
     ],
-    "relationships": [
-        {
-            "relationshipType": "one-to-one",
-            "otherEntityName": "qldtDaotaoCt",
-            "otherEntityRelationshipName": "qldtDmNguoidung",
-            "relationshipName": "daoTaoCt",
-            "otherEntityField": "id",
-            "ownerSide": true
-        },
-        {
-            "relationshipType": "one-to-one",
-            "otherEntityName": "qldtQlHocvien",
-            "otherEntityRelationshipName": "qldtDmNguoidung",
-            "relationshipName": "hocVien",
-            "otherEntityField": "id",
-            "ownerSide": true
-        }
-    ],
     "changelogDate": "20200302014300",
     "entityTableName": "QLDT_DM_NGUOIDUNG",
     "dto": "mapstruct",

@@ -12,12 +12,10 @@ import org.mapstruct.*;
 @Mapper(componentModel = "spring", uses = {QldtDaotaoCtMapper.class, QldtQlHocvienMapper.class})
 public interface QldtDmNguoidungMapper extends EntityMapper<QldtDmNguoidungDTO, QldtDmNguoidung> {
 
-    @Mapping(source = "daoTaoCt.id", target = "daoTaoCtId")
-    @Mapping(source = "hocVien.id", target = "hocVienId")
+
     QldtDmNguoidungDTO toDto(QldtDmNguoidung qldtDmNguoidung);
 
-    @Mapping(source = "daoTaoCtId", target = "daoTaoCt")
-    @Mapping(source = "hocVienId", target = "hocVien")
+ 
     QldtDmNguoidung toEntity(QldtDmNguoidungDTO qldtDmNguoidungDTO);
 
     default QldtDmNguoidung fromId(Long id) {

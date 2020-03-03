@@ -103,14 +103,7 @@ public class QldtDmNguoidungQueryService extends QueryService<QldtDmNguoidung> {
             if (criteria.getSudung() != null) {
                 specification = specification.and(buildRangeSpecification(criteria.getSudung(), QldtDmNguoidung_.sudung));
             }
-            if (criteria.getDaoTaoCtId() != null) {
-                specification = specification.and(buildSpecification(criteria.getDaoTaoCtId(),
-                    root -> root.join(QldtDmNguoidung_.daoTaoCt, JoinType.LEFT).get(QldtDaotaoCt_.id)));
-            }
-            if (criteria.getHocVienId() != null) {
-                specification = specification.and(buildSpecification(criteria.getHocVienId(),
-                    root -> root.join(QldtDmNguoidung_.hocVien, JoinType.LEFT).get(QldtQlHocvien_.id)));
-            }
+     
         }
         return specification;
     }

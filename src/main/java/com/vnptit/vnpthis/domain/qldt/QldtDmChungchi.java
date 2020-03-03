@@ -23,6 +23,7 @@ public class QldtDmChungchi implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
+    @Column(name = "chungchiid")
     private Long id;
 
     @Column(name = "machungchi")
@@ -45,6 +46,7 @@ public class QldtDmChungchi implements Serializable {
     private Set<QldtChungChi> chungChis = new HashSet<>();
 
     @ManyToOne
+    @JoinColumn(name = "tochuccapid", insertable = false, updatable = false)
     @JsonIgnoreProperties("dmChungchis")
     private QldtTochucCap qldtTochucCap;
 

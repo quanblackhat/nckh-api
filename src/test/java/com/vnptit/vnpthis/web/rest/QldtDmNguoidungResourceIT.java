@@ -597,44 +597,7 @@ public class QldtDmNguoidungResourceIT {
     }
 
 
-    @Test
-    @Transactional
-    public void getAllQldtDmNguoidungsByDaoTaoCtIsEqualToSomething() throws Exception {
-        // Initialize the database
-        qldtDmNguoidungRepository.saveAndFlush(qldtDmNguoidung);
-        QldtDaotaoCt daoTaoCt = QldtDaotaoCtResourceIT.createEntity(em);
-        em.persist(daoTaoCt);
-        em.flush();
-        qldtDmNguoidung.setDaoTaoCt(daoTaoCt);
-        qldtDmNguoidungRepository.saveAndFlush(qldtDmNguoidung);
-        Long daoTaoCtId = daoTaoCt.getId();
-
-        // Get all the qldtDmNguoidungList where daoTaoCt equals to daoTaoCtId
-        defaultQldtDmNguoidungShouldBeFound("daoTaoCtId.equals=" + daoTaoCtId);
-
-        // Get all the qldtDmNguoidungList where daoTaoCt equals to daoTaoCtId + 1
-        defaultQldtDmNguoidungShouldNotBeFound("daoTaoCtId.equals=" + (daoTaoCtId + 1));
-    }
-
-
-    @Test
-    @Transactional
-    public void getAllQldtDmNguoidungsByHocVienIsEqualToSomething() throws Exception {
-        // Initialize the database
-        qldtDmNguoidungRepository.saveAndFlush(qldtDmNguoidung);
-        QldtQlHocvien hocVien = QldtQlHocvienResourceIT.createEntity(em);
-        em.persist(hocVien);
-        em.flush();
-        qldtDmNguoidung.setHocVien(hocVien);
-        qldtDmNguoidungRepository.saveAndFlush(qldtDmNguoidung);
-        Long hocVienId = hocVien.getId();
-
-        // Get all the qldtDmNguoidungList where hocVien equals to hocVienId
-        defaultQldtDmNguoidungShouldBeFound("hocVienId.equals=" + hocVienId);
-
-        // Get all the qldtDmNguoidungList where hocVien equals to hocVienId + 1
-        defaultQldtDmNguoidungShouldNotBeFound("hocVienId.equals=" + (hocVienId + 1));
-    }
+  
 
     /**
      * Executes the search, and checks that the default entity is returned.

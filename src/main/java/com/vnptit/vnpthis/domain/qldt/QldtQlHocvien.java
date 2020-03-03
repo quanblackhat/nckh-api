@@ -20,9 +20,15 @@ public class QldtQlHocvien implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Column(name = "qlhocvienid")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
+    
+    @ManyToOne
+    @JoinColumn(name = "daotaoid", insertable = false, updatable = false)
+    @JsonIgnoreProperties("hocViens")
+    private QldtDaotao qldtDaotao;
 
     @Column(name = "diemdanh")
     private Integer diemdanh;
@@ -45,9 +51,7 @@ public class QldtQlHocvien implements Serializable {
     @Column(name = "mathanhtoan")
     private String mathanhtoan;
 
-    @ManyToOne
-    @JsonIgnoreProperties("hocViens")
-    private QldtDaotao qldtDaotao;
+   
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {

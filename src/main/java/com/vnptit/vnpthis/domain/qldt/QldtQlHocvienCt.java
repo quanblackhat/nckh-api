@@ -19,6 +19,7 @@ public class QldtQlHocvienCt implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Column(name = "qlhvctid")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
@@ -36,6 +37,7 @@ public class QldtQlHocvienCt implements Serializable {
     private Integer sudung;
 
     @ManyToOne
+    @JoinColumn(name = "daotaoctid", insertable = false, updatable = false)
     @JsonIgnoreProperties("hocVienCts")
     private QldtDaotaoCt qldtDaotaoCt;
 

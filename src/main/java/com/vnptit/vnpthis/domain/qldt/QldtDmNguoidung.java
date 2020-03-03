@@ -19,6 +19,7 @@ public class QldtDmNguoidung implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Column(name = "nguoidungid")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
@@ -34,14 +35,6 @@ public class QldtDmNguoidung implements Serializable {
 
     @Column(name = "sudung")
     private Integer sudung;
-
-    @OneToOne
-    @JoinColumn(unique = true)
-    private QldtDaotaoCt daoTaoCt;
-
-    @OneToOne
-    @JoinColumn(unique = true)
-    private QldtQlHocvien hocVien;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -102,32 +95,6 @@ public class QldtDmNguoidung implements Serializable {
 
     public void setSudung(Integer sudung) {
         this.sudung = sudung;
-    }
-
-    public QldtDaotaoCt getDaoTaoCt() {
-        return daoTaoCt;
-    }
-
-    public QldtDmNguoidung daoTaoCt(QldtDaotaoCt qldtDaotaoCt) {
-        this.daoTaoCt = qldtDaotaoCt;
-        return this;
-    }
-
-    public void setDaoTaoCt(QldtDaotaoCt qldtDaotaoCt) {
-        this.daoTaoCt = qldtDaotaoCt;
-    }
-
-    public QldtQlHocvien getHocVien() {
-        return hocVien;
-    }
-
-    public QldtDmNguoidung hocVien(QldtQlHocvien qldtQlHocvien) {
-        this.hocVien = qldtQlHocvien;
-        return this;
-    }
-
-    public void setHocVien(QldtQlHocvien qldtQlHocvien) {
-        this.hocVien = qldtQlHocvien;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

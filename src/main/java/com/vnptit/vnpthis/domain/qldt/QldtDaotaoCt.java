@@ -22,6 +22,7 @@ public class QldtDaotaoCt implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Column(name = "daotaoctid")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
@@ -55,6 +56,7 @@ public class QldtDaotaoCt implements Serializable {
     private Set<QldtQlHocvienCt> hocVienCts = new HashSet<>();
 
     @ManyToOne
+    @JoinColumn(name = "daotaoid", insertable = false, updatable = false)
     @JsonIgnoreProperties("daoTaoCts")
     private QldtDaotao qldtDaotao;
 

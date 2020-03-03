@@ -23,6 +23,7 @@ public class QldtDutoanDaotao implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
+    @Column(name = "dutoandtid")
     private Long id;
 
     @Column(name = "solop")
