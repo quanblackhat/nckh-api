@@ -1,0 +1,59 @@
+{
+    "name": "QldtDutoanDaotaoct",
+    "fields": [
+        {
+            "fieldName": "soluong",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "mucchi",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "thanhtien",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "noidung",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trangthaict",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dathanhtoan",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "qldtDutoanDaotao",
+            "otherEntityRelationshipName": "duToanDaotaoCt",
+            "relationshipName": "qldtDutoanDaotao",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "qldtDmNoidung",
+            "otherEntityRelationshipName": "duToandaotaoCt",
+            "relationshipName": "qldtDmNoidung",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200302014700",
+    "entityTableName": "QLDT_DUTOAN_DAOTAOCT",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

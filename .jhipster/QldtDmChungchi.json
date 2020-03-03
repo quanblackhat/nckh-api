@@ -1,0 +1,50 @@
+{
+    "name": "QldtDmChungchi",
+    "fields": [
+        {
+            "fieldName": "machungchi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tenchungchi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mota",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trangthai",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "qldtChungChi",
+            "otherEntityRelationshipName": "qldtDmChungchi",
+            "relationshipName": "chungChi"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "qldtTochucCap",
+            "otherEntityRelationshipName": "dmChungchi",
+            "relationshipName": "qldtTochucCap",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200302013900",
+    "entityTableName": "QLDT_DM_CHUNGCHI",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

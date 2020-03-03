@@ -1,0 +1,59 @@
+{
+    "name": "QldtDutoanDaotao",
+    "fields": [
+        {
+            "fieldName": "solop",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sohocvien",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dathanhtoan",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "madutoan",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tendutoan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trangthai",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ngayBd",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "ngayKt",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "qldtDutoanDaotaoct",
+            "otherEntityRelationshipName": "qldtDutoanDaotao",
+            "relationshipName": "duToanDaotaoCt"
+        }
+    ],
+    "changelogDate": "20200302014600",
+    "entityTableName": "QLDT_DUTOAN_DAOTAO",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

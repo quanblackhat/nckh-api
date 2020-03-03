@@ -1,0 +1,65 @@
+{
+    "name": "QldtDaotao",
+    "fields": [
+        {
+            "fieldName": "madaotao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tendaotao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ngayBd",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "ngayKt",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "diachi",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "doituongchitiet",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noidungdaotao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "thoigiandaotao",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "qldtDaotaoCt",
+            "otherEntityRelationshipName": "qldtDaotao",
+            "relationshipName": "daoTaoCt"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "qldtQlHocvien",
+            "otherEntityRelationshipName": "qldtDaotao",
+            "relationshipName": "hocVien"
+        }
+    ],
+    "changelogDate": "20200302014400",
+    "entityTableName": "QLDT_DAOTAO",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

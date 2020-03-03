@@ -1,0 +1,40 @@
+{
+    "name": "QldtQlHocvienCt",
+    "fields": [
+        {
+            "fieldName": "diemdanh",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "diemthi",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "danhgia",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sudung",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "qldtDaotaoCt",
+            "otherEntityRelationshipName": "hocVienCt",
+            "relationshipName": "qldtDaotaoCt",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200302014200",
+    "entityTableName": "QLDT_QL_HOCVIEN_CT",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

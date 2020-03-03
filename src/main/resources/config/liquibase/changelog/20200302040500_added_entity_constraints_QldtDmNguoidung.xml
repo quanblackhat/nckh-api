@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity QldtDmNguoidung.
+    -->
+    <changeSet id="20200302040500-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="dao_tao_ct_id"
+                                 baseTableName="dmnguoid"
+                                 constraintName="fk_dmnguoid_dao_tao_ct_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dtc"/>
+
+        <addForeignKeyConstraint baseColumnNames="hoc_vien_id"
+                                 baseTableName="dmnguoid"
+                                 constraintName="fk_dmnguoid_hoc_vien_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="qlhv"/>
+
+    </changeSet>
+</databaseChangeLog>
