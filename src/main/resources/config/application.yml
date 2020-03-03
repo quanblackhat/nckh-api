@@ -124,6 +124,16 @@ spring:
     ansi:
       console-available: true
 
+
+security:
+  oauth2:
+    client:
+      clientId: NupF3WUUvYlwupVHd_BvsXNAHasa
+      clientSecret: 17bDNJdi7AFt9ni8QRpGiJ06Nfga
+    resource:
+      jwk:
+        key-set-uri: https://localhost:9443/oauth2/jwks
+
 server:
   servlet:
     session:

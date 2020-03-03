@@ -17,10 +17,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.security.Principal;
 import java.util.*;
 
 /**
@@ -109,11 +111,16 @@ public class AccountResource {
 //            .orElseThrow(() -> new AccountResourceException("User could not be found"));
 //    }
 
+//    @GetMapping("/account")
+//    public AdmUserDTO getAccount() {
+//        return userService.getAdmUserWithAuthorities()
+//            .map(AdmUserDTO::new)
+//            .orElseThrow(() -> new AccountResourceException("User could not be found"));
+//    }
+
     @GetMapping("/account")
-    public AdmUserDTO getAccount() {
-        return userService.getAdmUserWithAuthorities()
-            .map(AdmUserDTO::new)
-            .orElseThrow(() -> new AccountResourceException("User could not be found"));
+    public AdmUserDTO getAccount(Principal principal) {
+        return userService.getCurrentUser((AbstractAuthenticationToken) principal);
     }
     /**
      * {@code POST  /account} : update the current user information.
